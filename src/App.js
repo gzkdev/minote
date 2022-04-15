@@ -1,6 +1,11 @@
+import GlobalStyles from "./components/GlobalStyles";
+
 function App() {
   return (
-    <h1>Minotes</h1>
+    <>
+      <GlobalStyles />
+      <h1>Minotes</h1>
+    </>
   );
 }
 
