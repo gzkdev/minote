@@ -11,7 +11,8 @@ const SearchBarStyled = styled.div`
   align-items: center;
   width: 90%;
   max-width: 1000px;
-  padding: 1rem 2rem;
+  min-height: 64px;
+  padding: 0 2rem;
   background-color: #fff;
   z-index: 900;
   border: 1px solid #999;
@@ -23,16 +24,14 @@ const SearchBarStyled = styled.div`
 
   & button {
     margin-left: 1rem;
-    padding: 0 0.8rem;
-    font-size: 1.25rem;
-    border: 1px solid #999;
+    width: 40px;
+    background-color: #999;
+    color: #fff;
     border-radius: 4px;
-    transition: 200ms;
+    transition: transform 200ms;
     cursor: pointer;
 
     &:active {
-      background-color: #999;
-      color: #fff;
       transform: scale(0.9);
     }
   }
