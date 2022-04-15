@@ -7,6 +7,7 @@ export function NotesProvider({ children }) {
     const [notes, SetNotes] = useState([]);
     const [isGrid, setIsGrid] = useState(false);
     const [theme, setTheme] = useState("light")
+    const [searchText, setSearchText] = useState("");
 
     const toggleTheme = () => {
         if (theme === "light") {
@@ -33,7 +34,7 @@ export function NotesProvider({ children }) {
     }
 
     return (
-        <NotesContext.Provider value={{ notes, addNote, deleteNote, updateNote, isGrid, setIsGrid, toggleTheme, theme }}>
+        <NotesContext.Provider value={{ notes, addNote, deleteNote, updateNote, isGrid, setIsGrid, toggleTheme, theme, searchText, setSearchText }}>
             {children}
         </NotesContext.Provider>
     )
