@@ -1,11 +1,12 @@
 import GlobalStyles from "./components/GlobalStyles";
+import SearchBar from "./components/SearchBar/SearchBar";
 import { NotesProvider } from "./NotesContext";
 
 function App() {
   return (
     <NotesProvider>
       <GlobalStyles />
-      <h1>Minotes</h1>
+      <SearchBar />
     </NotesProvider>
   );
 }

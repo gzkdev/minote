@@ -33,6 +33,14 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.2;
     }
 
+    input, button{
+        height: 40px;
+        outline: none;
+        border: none;
+        background: none;
+        font: inherit;
+    }
+
     img{
         display: block;
         max-width: 100%;
