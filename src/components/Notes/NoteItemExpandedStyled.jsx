@@ -5,7 +5,6 @@ const NoteItemExpandedStyled = styled.div`
   inset: 0;
   background-color: #fff;
   z-index: 1000;
-  overflow: hidden auto;
 
   & .wrapper {
     width: 90%;
@@ -14,7 +13,7 @@ const NoteItemExpandedStyled = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #000; */
+    overflow: hidden auto;
     padding: 0 0 2rem 0;
 
     & input {
@@ -29,10 +28,10 @@ const NoteItemExpandedStyled = styled.div`
       width: 100%;
       resize: none;
       flex-grow: 1;
-      height: auto;
       border: none;
       outline: none;
       font: inherit;
+      margin: 1rem 0;
     }
 
     & .top {
@@ -47,8 +46,14 @@ const NoteItemExpandedStyled = styled.div`
         transition: transform 200ms;
         border-radius: 4px;
         cursor: pointer;
+        padding-right: 1rem;
 
         &:nth-child(2) {
+          margin-left: auto;
+          margin-right: 1rem;
+        }
+
+        &:nth-child(3) {
           background-color: #999;
           padding: 0 1rem;
         }

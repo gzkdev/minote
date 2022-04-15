@@ -1,16 +1,21 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import NoteItemStyled from "./NoteItemStyled";
 import NoteItemExpanded from "./NoteItemExpanded";
-import { useState } from "react";
-import { motion, LayoutGroup, AnimatePresence } from "framer-motion";
 
 function NoteItem({ note, deleteNote, index, updateNote }) {
   const [isOpen, setIsOpen] = useState("");
 
   return (
-    <LayoutGroup>
-      <NoteItemStyled onClick={() => setIsOpen(note.id)} as={motion.div} layout>
-        <h4>{note.title}</h4>
-        <small>{note.date}</small>
+    <>
+      <NoteItemStyled
+        onClick={() => setIsOpen(note.id)}
+        as={motion.div}
+        layoutId={note.id}
+        layout
+      >
+        <motion.h4 layout>{note.title}</motion.h4>
+        <motion.small layout>{note.date}</motion.small>
       </NoteItemStyled>
 
       <AnimatePresence>
@@ -26,7 +31,7 @@ function NoteItem({ note, deleteNote, index, updateNote }) {
           />
         )}
       </AnimatePresence>
-    </LayoutGroup>
+    </>
   );
 }
 
