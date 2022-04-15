@@ -1,5 +1,5 @@
 import NoteItemStyled from "./NoteItemStyled";
-import NoteItemExpandedStyled from "./NoteItemExpandedStyled";
+import NoteItemExpanded from "./NoteItemExpanded";
 import { useState } from "react";
 import { motion, LayoutGroup, AnimatePresence } from "framer-motion";
 
@@ -15,7 +15,7 @@ function NoteItem({ note, deleteNote, index, updateNote }) {
 
       <AnimatePresence>
         {isOpen && (
-          <NoteItemExpandedStyled
+          <NoteItemExpanded
             isOpen={isOpen}
             note={note}
             deleteNote={deleteNote}
