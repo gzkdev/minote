@@ -9,12 +9,13 @@ export function NotesProvider({ children }) {
     const [theme, setTheme] = useState("light")
     const [searchText, setSearchText] = useState("");
 
+
+    document.documentElement.setAttribute("data-theme", theme);
+
     const toggleTheme = () => {
-        if (theme === "light") {
-            setTheme("dark")
-        } else {
-            setTheme("light");
-        }
+        (theme === "dark") ? setTheme("light") : setTheme("dark")
+
+        document.documentElement.setAttribute("data-theme", theme);
     }
 
     const addNote = (data) => {

@@ -6,11 +6,14 @@ const AddNoteButton = styled.button`
   right: 2rem;
   height: 64px;
   width: 64px;
-  background-color: #000;
-  color: #fff;
-  transition: 0ms !important;
-  border-radius: 8px;
+  background-color: var(--color6);
+  color: var(--color1);
+  border-radius: 200px;
   cursor: pointer;
+
+  @media (min-width: 760px) {
+    right: 6rem;
+  }
 `;
 
 export default AddNoteButton;

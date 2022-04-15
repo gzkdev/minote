@@ -3,7 +3,7 @@ import styled from "styled-components";
 const NoteItemExpandedStyled = styled.div`
   position: fixed;
   inset: 0;
-  background-color: #fff;
+  background-color: var(--color0);
   z-index: 1000;
 
   & .wrapper {
@@ -15,6 +15,10 @@ const NoteItemExpandedStyled = styled.div`
     flex-direction: column;
     overflow: hidden auto;
     padding: 0 0 2rem 0;
+
+    & span {
+      color: var(--color5);
+    }
 
     & input {
       width: 100%;
@@ -32,6 +36,8 @@ const NoteItemExpandedStyled = styled.div`
       outline: none;
       font: inherit;
       margin: 1rem 0;
+      background: none;
+      color: inherit;
     }
 
     & .top {
@@ -51,10 +57,12 @@ const NoteItemExpandedStyled = styled.div`
         &:nth-child(2) {
           margin-left: auto;
           margin-right: 1rem;
+          color: var(--color5);
         }
 
         &:nth-child(3) {
-          background-color: #999;
+          background-color: var(--color6);
+          color: var(--color1);
           padding: 0 1rem;
         }
 

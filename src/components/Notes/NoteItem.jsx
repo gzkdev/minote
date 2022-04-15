@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import NoteItemStyled from "./NoteItemStyled";
 import NoteItemExpanded from "./NoteItemExpanded";
 
@@ -7,7 +7,7 @@ function NoteItem({ note, deleteNote, index, updateNote }) {
   const [isOpen, setIsOpen] = useState("");
 
   return (
-    <>
+    <LayoutGroup>
       <NoteItemStyled
         onClick={() => setIsOpen(note.id)}
         as={motion.div}
@@ -31,7 +31,7 @@ function NoteItem({ note, deleteNote, index, updateNote }) {
           />
         )}
       </AnimatePresence>
-    </>
+    </LayoutGroup>
   );
 }
 

@@ -15,9 +15,8 @@ const SearchBarStyled = styled.div`
   max-width: 1000px;
   min-height: 64px;
   padding: 0 1rem;
-  background-color: #fff;
+  background-color: var(--color0);
   z-index: 900;
-  border: 1px solid #999;
   border-radius: 8px;
 
   & input {
@@ -25,9 +24,10 @@ const SearchBarStyled = styled.div`
   }
 
   & button {
-    margin-left: 1rem;
     width: 40px;
-    border: 1px solid #999;
+    color: var(--color1);
+    background-color: var(--color6);
+    margin-left: 1rem;
     border-radius: 4px;
     transition: transform 200ms;
     cursor: pointer;
@@ -39,7 +39,7 @@ const SearchBarStyled = styled.div`
 `;
 
 function SearchBar() {
-  const { searchText, setSearchText } = useContext(NotesContext);
+  const { searchText, setSearchText, toggleTheme } = useContext(NotesContext);
 
   return (
     <SearchBarStyled>
@@ -52,7 +52,7 @@ function SearchBar() {
       <button>
         <LineIcon name="grid-alt" />
       </button>
-      <button>
+      <button onClick={toggleTheme}>
         <LineIcon name="sun" />
       </button>
     </SearchBarStyled>

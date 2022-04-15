@@ -18,7 +18,6 @@ const EmptyStateStyled = styled.div`
     height: 200px;
     margin-bottom: 2rem;
     object-fit: contain;
-    filter: grayscale(10);
     pointer-events: none;
   }
 `;

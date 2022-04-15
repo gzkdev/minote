@@ -3,7 +3,7 @@ import styled from "styled-components";
 const NoteFormStyled = styled.div`
   position: fixed;
   inset: 0;
-  background-color: #fff;
+  background-color: var(--color0);
   z-index: 1000;
   overflow: hidden auto;
 
@@ -14,7 +14,6 @@ const NoteFormStyled = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #000; */
     padding: 0 0 2rem 0;
 
     & input {
@@ -33,6 +32,8 @@ const NoteFormStyled = styled.div`
       border: none;
       outline: none;
       font: inherit;
+      background: none;
+      color: var(--color6);
     }
 
     & .top {
@@ -46,10 +47,12 @@ const NoteFormStyled = styled.div`
         font-weight: 600;
         transition: transform 200ms;
         border-radius: 4px;
+        padding: 0 0.5rem;
         cursor: pointer;
 
         &:nth-child(2) {
-          background-color: #999;
+          background-color: var(--color6);
+          color: var(--color1);
           padding: 0 1rem;
         }
 

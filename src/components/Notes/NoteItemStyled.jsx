@@ -6,7 +6,7 @@ const NoteItemStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #999;
+  background-color: var(--color0);
   border-radius: 8px;
   cursor: pointer;
 `;
