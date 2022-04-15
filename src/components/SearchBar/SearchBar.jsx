@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchInput from "./SearchInput";
+import LineIcon from "react-lineicons";
 
 const SearchBarStyled = styled.div`
   position: fixed;
@@ -22,9 +23,18 @@ const SearchBarStyled = styled.div`
 
   & button {
     margin-left: 1rem;
-    padding: 0 1.2rem;
-    background-color: #999;
+    padding: 0 0.8rem;
+    font-size: 1.25rem;
+    border: 1px solid #999;
     border-radius: 4px;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:active {
+      background-color: #999;
+      color: #fff;
+      transform: scale(0.9);
+    }
   }
 `;
 
@@ -32,8 +42,12 @@ function SearchBar() {
   return (
     <SearchBarStyled>
       <SearchInput placeholder="Search notes" type="text" />
-      <button></button>
-      <button></button>
+      <button>
+        <LineIcon name="grid-alt" />
+      </button>
+      <button>
+        <LineIcon name="sun" />
+      </button>
     </SearchBarStyled>
   );
 }
