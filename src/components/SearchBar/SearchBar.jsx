@@ -11,9 +11,9 @@ const SearchBarStyled = styled.div`
   transform: translate(-50%, 0);
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 95%;
   max-width: 1000px;
-  min-height: 56px;
+  min-height: 64px;
   padding: 0 1rem;
   background-color: var(--color-white);
   border: 1px solid var(--color-off-white);

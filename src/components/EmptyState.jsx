@@ -4,7 +4,7 @@ import EmptyStateImage from "../assets/images/empty-state.svg";
 
 const EmptyStateStyled = styled.div`
   max-width: 90%;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +14,8 @@ const EmptyStateStyled = styled.div`
 
   & img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 164px;
+    height: 164px;
     margin-bottom: 2rem;
     object-fit: contain;
     pointer-events: none;
