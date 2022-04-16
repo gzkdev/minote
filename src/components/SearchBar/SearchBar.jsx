@@ -46,7 +46,7 @@ function SearchBar() {
     <SearchBarStyled>
       <SearchInput
         placeholder="Search notes"
-        type="text"
+        type="search"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
