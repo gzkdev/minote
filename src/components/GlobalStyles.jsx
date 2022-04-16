@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
         --color-text:rgb(12, 32, 39);
         --color-white: hsl(0, 0%, 100%);
         --color-off-white: rgb(235, 235, 235);
-        --color-blue: 95, 53%, 79%;
+        --color-blue: 195, 65%, 50%;
         --color-red: 0, 100%, 50%;
         --color-yellow: 44, 100%, 53%;
         --color-green: 110, 91%, 40%;
@@ -84,7 +84,12 @@ const GlobalStyles = createGlobalStyle`
         border: none;
         background: none;
         font: inherit;
-      color: inherit;
+        color: inherit;
+    }
+
+    *::placeholder{
+        color: inherit;
+        font: inherit;
     }
 
     img{

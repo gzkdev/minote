@@ -3,9 +3,9 @@ import styled from "styled-components";
 const NoteFormStyled = styled.div`
   position: fixed;
   inset: 0;
-  background-color: var(--color0);
-  z-index: 1000;
+  background-color: var(--color-white);
   overflow: hidden auto;
+  z-index: 1000;
 
   & .wrapper {
     width: 90%;
@@ -33,7 +33,7 @@ const NoteFormStyled = styled.div`
       outline: none;
       font: inherit;
       background: none;
-      color: var(--color6);
+      color: inherit;
     }
 
     & .top {
@@ -51,9 +51,9 @@ const NoteFormStyled = styled.div`
         cursor: pointer;
 
         &:nth-child(2) {
-          background-color: var(--color6);
-          color: var(--color1);
-          padding: 0 1rem;
+          background-color: hsl(var(--color-blue));
+          color: var(--color-white);
+          padding: 0 1.5rem;
         }
 
         &:active {
