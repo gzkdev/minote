@@ -15,22 +15,33 @@ const GlobalStyles = createGlobalStyle`
         font-size: 100%;
         scroll-behavior: smooth;
         box-sizing: border-box;
+        --color-bg: rgb(248, 248, 248);
+        --color-text:rgb(12, 32, 39);
+        --color-white: hsl(0, 0%, 100%);
+        --color-off-white: rgb(235, 235, 235);
+        --color-blue: 95, 53%, 79%;
+        --color-red: 0, 100%, 50%;
+        --color-yellow: 44, 100%, 53%;
+        --color-green: 110, 91%, 40%;
+
+
+        /* --color-text: hsl(195, 53%, 79%); */
         /* --color1: rgb(238, 248, 255);
         --color2: rgb(187, 222, 251);
         --color3: rgb(144, 202, 249);
         --color4: rgb(100, 181, 246);
         --color5: rgb(21, 101, 192);
         --color6: rgb(13, 71, 161); */
-        --color0: rgb(255, 255, 255);
+        /* --color0: rgb(255, 255, 255);
         --color2: rgb(236, 239, 241);
         --color1: rgb(207, 216, 220);
         --color3: rgb(176, 190, 197);
         --color4: rgb(144, 164, 174);
         --color5: rgb(69, 90, 100);
-        --color6: rgb(13, 71, 161);
+        --color6: rgb(13, 71, 161); */
     }
 
-    [data-theme="dark"]{   
+    /* [data-theme="dark"]{   
         --color4: rgb(255, 255, 255);
         --color6: rgb(236, 239, 241);
         --color2: rgb(207, 216, 220);
@@ -47,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
         color: var(--color6);
         }
 
-    }
+    } */
 
     body{
         font-size: 1rem;
@@ -58,8 +69,8 @@ const GlobalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
-        color: var(--color5);
-        background-color: var(--color1);
+        color: var(--color-text);
+        background-color: var(--color-bg);
     }
 
     h1,h2,h3{

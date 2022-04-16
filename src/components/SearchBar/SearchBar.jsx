@@ -13,9 +13,10 @@ const SearchBarStyled = styled.div`
   align-items: center;
   width: 90%;
   max-width: 1000px;
-  min-height: 64px;
+  min-height: 56px;
   padding: 0 1rem;
-  background-color: var(--color0);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-off-white);
   z-index: 900;
   border-radius: 8px;
 
@@ -25,15 +26,15 @@ const SearchBarStyled = styled.div`
 
   & button {
     width: 40px;
-    color: var(--color1);
-    background-color: var(--color6);
+    font-size: 1.25rem;
     margin-left: 1rem;
     border-radius: 4px;
-    transition: transform 200ms;
     cursor: pointer;
+    transition: transform 200ms, background-color 100ms;
 
     &:active {
       transform: scale(0.9);
+      background-color: var(--color-off-white);
     }
   }
 `;
