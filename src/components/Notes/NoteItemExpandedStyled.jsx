@@ -3,7 +3,7 @@ import styled from "styled-components";
 const NoteItemExpandedStyled = styled.div`
   position: fixed;
   inset: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-100);
   z-index: 1000;
 
   & .wrapper {
@@ -51,18 +51,29 @@ const NoteItemExpandedStyled = styled.div`
         font-weight: 600;
         transition: transform 200ms;
         border-radius: 4px;
-        padding-right: 1rem;
+        background-color: var(--color-120);
         cursor: pointer;
+
+        &:nth-child(1) {
+          border-radius: 50%;
+          width: 40px;
+        }
 
         &:nth-child(2) {
           margin-left: auto;
           margin-right: 1rem;
+          padding: 0 1rem;
         }
 
         &:nth-child(3) {
-          background-color: hsl(var(--color-blue));
-          color: var(--color-white);
+          background-color: var(--color-300);
+          color: var(--color-100);
           padding: 0 1rem;
+          transition: 200ms;
+
+          &:hover {
+            background-color: var(--color-400);
+          }
         }
 
         &:active {

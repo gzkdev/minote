@@ -15,8 +15,8 @@ const SearchBarStyled = styled.div`
   max-width: 1000px;
   min-height: 64px;
   padding: 0 1rem;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-off-white);
+  background-color: var(--color-100);
+  border: 1px solid var(--color-800);
   z-index: 900;
   border-radius: 8px;
 

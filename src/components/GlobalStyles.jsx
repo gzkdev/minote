@@ -15,27 +15,27 @@ const GlobalStyles = createGlobalStyle`
         font-size: 100%;
         scroll-behavior: smooth;
         box-sizing: border-box;
-        --color-bg: #f0f0f0;
-        --color-text:rgb(12, 32, 39);
-        --color-white: hsl(0, 0%, 100%);
-        --color-off-white: rgb(235, 235, 235);
-        --color-blue: 195, 65%, 50%;
-        --color-red: 0, 100%, 50%;
-        --color-yellow: 44, 100%, 53%;
-        --color-green: 110, 91%, 40%;
+        --color-100: #ffffff;
+        --color-110: #fbfbfb;
+        --color-120: #dceeff;
+        --color-200: #3898ff;
+        --color-300: #081ae1;
+        --color-400: #191155;
+        --color-500: #415acb;
+        --color-600: #f6591c;
+        --color-700: #040118;
+        --color-800: #b4bad3;
     }
 
     body{
         font-size: 1rem;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
-        color: var(--color-text);
-        background-color: var(--color-bg);
+        color: var(--color-700);
+        background-color: var(--color-110);
     }
 
     h1,h2,h3{

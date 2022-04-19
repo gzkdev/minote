@@ -6,8 +6,8 @@ const AddNoteButton = styled.button`
   right: 2rem;
   height: 64px;
   width: 64px;
-  background-color: hsl(var(--color-blue));
-  color: var(--color-white);
+  background-color: var(--color-300);
+  color: var(--color-100);
   border-radius: 8px;
   cursor: pointer;
 

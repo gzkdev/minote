@@ -3,7 +3,7 @@ import styled from "styled-components";
 const NoteFormStyled = styled.div`
   position: fixed;
   inset: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-100);
   overflow: hidden auto;
   z-index: 1000;
 
@@ -44,16 +44,19 @@ const NoteFormStyled = styled.div`
       padding: 1rem 0;
 
       & button {
+        width: 40px;
         font-weight: 600;
         transition: transform 200ms;
-        border-radius: 4px;
-        padding: 0 0.5rem;
+        border-radius: 50%;
+        background-color: var(--color-120);
         cursor: pointer;
 
         &:nth-child(2) {
-          background-color: hsl(var(--color-blue));
-          color: var(--color-white);
+          background-color: var(--color-300);
+          color: var(--color-100);
           padding: 0 1.5rem;
+          width: fit-content;
+          border-radius: 4px;
         }
 
         &:active {
