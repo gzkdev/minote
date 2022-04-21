@@ -25,8 +25,8 @@ const GlobalStyles = createGlobalStyle`
         --color-600: #f6591c;
         --color-700: #040118;
         --color-800: #b4bad3;
-        --fs--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
-        --fs--1: clamp(0.78rem, calc(0.61rem + 0.82vw), 1.20rem);
+        --fs--2: clamp(0.79rem, calc(0.59rem + 0.52vw), 0.96rem);
+        --fs--1: clamp(0.8rem, calc(0.61rem + 0.82vw), 1.20rem);
         --fs-0: clamp(0.88rem, calc(0.63rem + 1.22vw), 1.50rem);
         --fs-1: clamp(0.98rem, calc(0.64rem + 1.74vw), 1.88rem);
         --fs-2: clamp(1.11rem, calc(0.63rem + 2.41vw), 2.34rem);
