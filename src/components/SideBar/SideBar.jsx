@@ -28,10 +28,9 @@ const SideBarStyled = styled.div`
     width: 80%;
     max-width: 400px;
     height: 100%;
-    background-color: #fff;
+    /* background-color: var(--color-120); */
     transform: translate(-100%, 0);
     transition: transform 400ms;
-    transition-delay: 800ms;
     padding: 4rem 2rem;
 
     & .sideBar__btn {
@@ -43,6 +42,7 @@ const SideBarStyled = styled.div`
       font-weight: bold;
       border: none;
       outline: none;
+      cursor: pointer;
     }
   }
 
@@ -51,7 +51,8 @@ const SideBarStyled = styled.div`
     height: 100vh;
     opacity: 1;
     max-width: 320px;
-    background-color: none;
+    background: none !important;
+    pointer-events: all;
   }
 
   .sideBar__box {
