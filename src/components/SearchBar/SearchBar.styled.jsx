@@ -8,7 +8,6 @@ const SearchBarStyled = styled.div`
   display: flex;
   align-items: center;
   width: 90%;
-  max-width: 1000px;
   min-height: 48px;
   padding: 0 1rem;
   background-color: var(--color-100);
