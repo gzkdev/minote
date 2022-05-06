@@ -4,14 +4,19 @@ import Notes from "./components/Notes/Notes";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { NotesProvider } from "./NotesContext";
 import AppContainer from "./components/AppContainer/AppContainer";
+import SideBar from "./components/SideBar/SideBar";
+import MainContainer from "./components/MainContainer";
 
 function App() {
   return (
     <NotesProvider>
       <GlobalStyles />
-      <SearchBar />
       <AppContainer>
-        <Notes />
+        <SideBar />
+        <MainContainer>
+          <SearchBar />
+          <Notes />
+        </MainContainer>
       </AppContainer>
       <AddNoteForm />
     </NotesProvider>
