@@ -1,7 +1,7 @@
 import AddNoteForm from "./components/AddNoteForm/AddNoteForm";
 import GlobalStyles from "./components/GlobalStyles";
-import Notes from "./components/Notes/Notes";
-import SearchBar from "./components/SearchBar/SearchBar";
+// import Notes from "./components/Notes/Notes";
+// import SearchBar from "./components/SearchBar/SearchBar";
 import { NotesProvider } from "./NotesContext";
 import AppContainer from "./components/AppContainer/AppContainer";
 import SideBar from "./components/SideBar/SideBar";
@@ -13,10 +13,7 @@ function App() {
       <GlobalStyles />
       <AppContainer>
         <SideBar />
-        <MainContainer>
-          <SearchBar />
-          <Notes />
-        </MainContainer>
+        <MainContainer />
       </AppContainer>
       <AddNoteForm />
     </NotesProvider>

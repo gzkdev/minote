@@ -11,23 +11,27 @@ const SideBarStyled = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1000;
-  transition: opacity 400ms;
   opacity: 0;
+  transition: opacity 200ms;
   pointer-events: none;
 
   &[data-toggle="true"] {
     opacity: 1;
     pointer-events: all;
+
+    .sideBar__box {
+      transform: translate(0, 0);
+    }
   }
 
   .sideBar__box {
     width: 80%;
     max-width: 400px;
-    position: absolute;
     height: 100%;
     background-color: #fff;
     transform: translate(-100%, 0);
     transition: transform 400ms;
+    transition-delay: 800ms;
     padding: 4rem 2rem;
 
     & .sideBar__btn {
@@ -36,31 +40,23 @@ const SideBarStyled = styled.div`
       text-align: start;
       margin-bottom: 2rem;
       padding-left: 1rem;
-      background-color: gray;
+      font-weight: bold;
       border: none;
       outline: none;
     }
   }
 
-  &[data-toggle="true"] .sideBar__box {
-    transform: translate(0, 0);
-  }
-
   @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0;
+    position: static;
     height: 100vh;
     opacity: 1;
+    max-width: 320px;
     background-color: none;
   }
 
   .sideBar__box {
     width: 100%;
-    max-width: auto;
+    transform: translate(0, 0);
   }
 `;
 
@@ -69,7 +65,7 @@ export default function SideBar() {
   return (
     <SideBarStyled data-toggle={isActive && isActive} onClick={toggleisActive}>
       <div className="sideBar__box">
-        <button className="sideBar__btn">All Notes</button>
+        <button className="sideBar__btn">Notes</button>
         <button className="sideBar__btn">Categories</button>
         <button className="sideBar__btn">Trash</button>
         <button className="sideBar__btn">Settings</button>

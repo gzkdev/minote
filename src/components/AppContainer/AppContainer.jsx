@@ -1,15 +1,22 @@
 import styled from "styled-components";
+import SideBar from "../SideBar/SideBar";
+import MainContainer from "../MainContainer";
 
 const AppContainerStyled = styled.div`
   width: 100%;
   position: relative;
 
-  @media (width: 768px) {
-    display: grid;
-    grid-template-columns: minmax(240px, 320px) 1fr;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: flex-start;
   }
 `;
 
-export default function AppContainer({ children }) {
-  return <AppContainerStyled>{children}</AppContainerStyled>;
+export default function AppContainer() {
+  return (
+    <AppContainerStyled>
+      <SideBar />
+      <MainContainer />
+    </AppContainerStyled>
+  );
 }
