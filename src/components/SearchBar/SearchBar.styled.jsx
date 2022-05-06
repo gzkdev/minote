@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   align-items: center;
-  width: 90%;
+  width: calc(100% - 2rem);
   min-height: 48px;
   padding: 0 1rem;
   background-color: var(--color-100);

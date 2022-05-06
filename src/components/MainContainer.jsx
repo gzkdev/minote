@@ -4,10 +4,8 @@ import SearchBar from "./SearchBar/SearchBar";
 
 const MainContainerStyled = styled.div`
   position: relative;
-  border: 1px solid blue;
   width: 100%;
-  padding: 2rem 1rem 4rem;
-  border: 1px solid blue;
+  padding: 1rem 1rem;
 `;
 
 export default function MainContainer({ children }) {
