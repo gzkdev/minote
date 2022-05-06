@@ -6,16 +6,11 @@ const NotesContext = createContext();
 export function NotesProvider({ children }) {
     const [notes, SetNotes] = useState([]);
     const [isGrid, setIsGrid] = useState(false);
-    const [theme, setTheme] = useState("light")
+    const [isActive, setIsActive] = useState(false)
     const [searchText, setSearchText] = useState("");
 
-
-    document.documentElement.setAttribute("data-theme", theme);
-
-    const toggleTheme = () => {
-        (theme === "dark") ? setTheme("light") : setTheme("dark")
-
-        document.documentElement.setAttribute("data-theme", theme);
+    const toggleisActive = (e) => {
+        setIsActive(isActive => !isActive);
     }
 
     const addNote = (data) => {
@@ -35,7 +30,7 @@ export function NotesProvider({ children }) {
     }
 
     return (
-        <NotesContext.Provider value={{ notes, addNote, deleteNote, updateNote, isGrid, setIsGrid, toggleTheme, theme, searchText, setSearchText }}>
+        <NotesContext.Provider value={{ notes, addNote, deleteNote, updateNote, isGrid, setIsGrid, toggleisActive, isActive, searchText, setSearchText }}>
             {children}
         </NotesContext.Provider>
     )

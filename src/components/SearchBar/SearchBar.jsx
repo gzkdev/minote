@@ -5,7 +5,8 @@ import LineIcon from "react-lineicons";
 import SearchBarStyled from "./SearchBar.styled";
 
 function SearchBar() {
-  const { searchText, setSearchText, toggleTheme } = useContext(NotesContext);
+  const { searchText, setSearchText, toggleisActive } =
+    useContext(NotesContext);
 
   return (
     <SearchBarStyled>
@@ -18,8 +19,8 @@ function SearchBar() {
       <button>
         <LineIcon name="grid-alt" />
       </button>
-      <button onClick={toggleTheme}>
-        <LineIcon name="sun" />
+      <button onClick={toggleisActive}>
+        <LineIcon name="menu" />
       </button>
     </SearchBarStyled>
   );
