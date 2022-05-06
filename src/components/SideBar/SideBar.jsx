@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useContext } from "react";
 import NotesContext from "../../NotesContext";
+import LineIcon from "react-lineicons";
 
 const SideBarStyled = styled.div`
   width: 100%;
@@ -25,24 +26,39 @@ const SideBarStyled = styled.div`
   }
 
   .sideBar__box {
-    width: 80%;
-    max-width: 400px;
+    width: min(320px, 70vw);
     height: 100%;
-    /* background-color: var(--color-120); */
+    background-color: var(--color-100);
     transform: translate(-100%, 0);
     transition: transform 400ms;
-    padding: 4rem 2rem;
+    padding: 4rem 0;
+
+    & .sideBar__title {
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+      font-size: var(--fs-1);
+    }
 
     & .sideBar__btn {
-      display: block;
+      display: flex;
+      align-items: center;
       width: 100%;
-      text-align: start;
-      margin-bottom: 2rem;
-      padding-left: 1rem;
+      padding: 2rem 2rem;
       font-weight: bold;
       border: none;
       outline: none;
       cursor: pointer;
+
+      &:hover,
+      &:active {
+        background: var(--color-120);
+      }
+    }
+
+    & a.sideBar__btn {
+      text-decoration: none;
+      color: inherit;
+      padding: 1.5rem 2rem;
     }
   }
 
@@ -53,11 +69,11 @@ const SideBarStyled = styled.div`
     max-width: 320px;
     background: none !important;
     pointer-events: all;
-  }
 
-  .sideBar__box {
-    width: 100%;
-    transform: translate(0, 0);
+    & .sideBar__box {
+      width: 100%;
+      transform: translate(0, 0);
+    }
   }
 `;
 
@@ -66,17 +82,31 @@ export default function SideBar() {
   return (
     <SideBarStyled data-toggle={isActive && isActive} onClick={toggleisActive}>
       <div className="sideBar__box">
-        <button className="sideBar__btn">Notes</button>
-        <button className="sideBar__btn">Categories</button>
-        <button className="sideBar__btn">Trash</button>
-        <button className="sideBar__btn">Settings</button>
+        <h3 className="sideBar__title">minotes</h3>
+        <button className="sideBar__btn">
+          <LineIcon name="pencil" />
+          &nbsp;&nbsp;Notes
+        </button>
+        <button className="sideBar__btn">
+          <LineIcon name="archive" />
+          &nbsp;&nbsp;Categories
+        </button>
+        <button className="sideBar__btn">
+          <LineIcon name="trash-can" />
+          &nbsp;&nbsp;Trash
+        </button>
+        <button className="sideBar__btn">
+          <LineIcon name="cog" />
+          &nbsp;&nbsp;Settings
+        </button>
         <a
           className="sideBar__btn"
           href="https://github.com/gzkdev/minotes"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Source code
+          <LineIcon name="link" />
+          &nbsp;&nbsp;View Source code
         </a>
       </div>
     </SideBarStyled>
