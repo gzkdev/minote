@@ -2,19 +2,27 @@ import styled from "styled-components";
 
 const NoteFormStyled = styled.div`
   position: fixed;
-  inset: 0;
-  background-color: var(--color-100);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden auto;
+  transition: 0ms !important;
   z-index: 1000;
 
   & .wrapper {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    height: 100%;
+    width: min(90vw, 560px);
+    height: min(80vh, 400px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    border-radius: 8px;
     flex-direction: column;
-    padding: 0 0 2rem 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-100);
 
     & input {
       width: 100%;

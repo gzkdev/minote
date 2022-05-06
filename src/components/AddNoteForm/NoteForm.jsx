@@ -25,7 +25,7 @@ function NoteForm({ isOpen, setIsOpen }) {
   };
 
   return (
-    <NoteFormStyled as={motion.div} layoutId="form">
+    <NoteFormStyled as={motion.div}>
       <div className="wrapper">
         <div className="top">
           <button onClick={() => setIsOpen(!isOpen)}>
