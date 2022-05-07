@@ -2,7 +2,12 @@ import NotePageStyled from "../components/NotePage.styled";
 import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
 
-export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
+export default function NotePageForm({
+  data,
+  deleteNote,
+  handleSaveNote,
+  navigate,
+}) {
   const [noteContent, setNoteContent] = useState(data.content);
   const [noteTitle, setNoteTitle] = useState(data.title);
 
@@ -19,7 +24,8 @@ export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
       title: noteTitle,
       content: noteContent,
       id: data.id,
-      date: new Date().toLocaleDateString,
+      category: undefined,
+      date: new Date().toLocaleDateString(),
     };
     handleSaveNote(newNote);
   };
@@ -27,7 +33,7 @@ export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
   return (
     <NotePageStyled>
       <div className="top">
-        <button>
+        <button onClick={() => navigate("/")}>
           <FaArrowLeft />
         </button>
         <button onClick={() => deleteNote(data.id)}>Delete</button>

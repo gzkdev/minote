@@ -23,7 +23,7 @@ export default function Note() {
 
     const handleSaveNote = (data) => {
         notes[data.id] = data;
-        console.log(notes[data.id])
+        navigate("/")
     }
 
     return (
@@ -31,7 +31,7 @@ export default function Note() {
             <SideBar />
             <MainContainer>
                 <SearchBar />
-                <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} notes={notes} />
+                <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} navigate={navigate} />
             </MainContainer>
         </AppContainer>
     )
