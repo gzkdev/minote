@@ -5,6 +5,7 @@ import AppContainer from "../components/AppContainer/AppContainer";
 import MainContainer from "../components/MainContainer";
 import SearchBar from "../components/SearchBar/SearchBar";
 import SideBar from "../components/SideBar/SideBar";
+import NotePageForm from "../components/NotePageForm";
 
 export default function Note() {
     const params = useParams();
@@ -21,17 +22,11 @@ export default function Note() {
     }
 
     return (
-
         <AppContainer>
             <SideBar />
             <MainContainer>
                 <SearchBar />
-                <section>
-                    <h4>{data.title}</h4>
-                    <span>{data.date}</span>
-                    <p>{data.content && data.content}</p>
-                    <button onClick={() => deleteNote(data.id)} style={{ background: "gray" }}>delete note</button>
-                </section>
+                <NotePageForm data={data} deleteNote={deleteNote} />
             </MainContainer>
         </AppContainer>
     )
