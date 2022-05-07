@@ -3,7 +3,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import { NotesProvider } from "./NotesContext";
 import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
-import Note from "./Pages/Note";
+import Note from "./Pages/NotePage";
 
 function App() {
   return (

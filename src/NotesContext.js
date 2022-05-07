@@ -4,34 +4,31 @@ const NotesContext = createContext();
 
 export function NotesProvider({ children }) {
     const [notes, SetNotes] = useState({});
-
     const [isActive, setIsActive] = useState(false)
     const [searchText, setSearchText] = useState("");
+
 
     const toggleisActive = (e) => {
         setIsActive(isActive => !isActive);
     }
 
     const addNote = (data) => {
-        const newNotes = { ...notes };
-        newNotes[data.id] = data;
-        SetNotes(newNotes);
+        SetNotes({ ...notes, [data.id]: data });
     }
 
-    const deleteNote = (id) => {
-        let newNotes = notes.filter(note => note.id !== id)
-        SetNotes(newNotes)
+    const updateSetNote = (data) => {
+        SetNotes(data)
     }
 
-    const updateNote = (index, title, text, date) => {
-        let note = notes[index];
-        note.title = title;
-        note.text = text;
-        note.date = date;
-    }
+    // const updateNote = (index, title, text, date) => {
+    //     let note = notes[index];
+    //     note.title = title;
+    //     note.text = text;
+    //     note.date = date;
+    // }
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText }}>
+        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote }}>
             {children}
         </NotesContext.Provider>
     )
