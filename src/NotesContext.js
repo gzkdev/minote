@@ -1,23 +1,10 @@
 import { createContext, useState } from "react";
 
-
 const NotesContext = createContext();
 
 export function NotesProvider({ children }) {
-    const [notes, SetNotes] = useState({
-        "0": {
-            id: "0",
-            title: "New note",
-            content: "Lorem ipsum is crazy",
-            date: "12/12/2022"
-        },
-        "1": {
-            id: "1",
-            title: "Second note",
-            content: "Lorem ipsum is crazy and enough",
-            date: "14/12/2022"
-        }
-    });
+    const [notes, SetNotes] = useState({});
+
     const [isActive, setIsActive] = useState(false)
     const [searchText, setSearchText] = useState("");
 
@@ -26,7 +13,9 @@ export function NotesProvider({ children }) {
     }
 
     const addNote = (data) => {
-        SetNotes(prevNotes => [...prevNotes, data])
+        const newNotes = { ...notes };
+        newNotes[data.id] = data;
+        SetNotes(newNotes);
     }
 
     const deleteNote = (id) => {
@@ -42,7 +31,7 @@ export function NotesProvider({ children }) {
     }
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive }}>
+        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText }}>
             {children}
         </NotesContext.Provider>
     )

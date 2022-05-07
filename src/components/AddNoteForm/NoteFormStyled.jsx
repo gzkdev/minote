@@ -12,8 +12,8 @@ const NoteFormStyled = styled.div`
   z-index: 1000;
 
   & .wrapper {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,6 +74,13 @@ const NoteFormStyled = styled.div`
           transform: scale(0.9);
         }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    & .wrapper {
+      width: 640px;
+      height: 480px;
     }
   }
 `;
