@@ -6,7 +6,7 @@ function NoteItem({ data }) {
   return (
     <NoteItemStyled as={motion.div} layout>
       <Link to={`notes/${data.id}`}>
-        <motion.div layout>
+        <div>
           <div>
             <h4>{data.title}</h4>
             {data.content &&
@@ -17,7 +17,7 @@ function NoteItem({ data }) {
               ))}
           </div>
           <small>{data.date}</small>
-        </motion.div>
+        </div>
       </Link>
     </NoteItemStyled>
   );

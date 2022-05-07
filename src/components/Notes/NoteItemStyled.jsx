@@ -10,13 +10,13 @@ const NoteItemStyled = styled.div`
 
     & > div {
       padding: 1rem 1rem;
-      min-height: 128px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       & p {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0 1rem;
       }
     }
   }
