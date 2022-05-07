@@ -66,7 +66,8 @@ const SideBarStyled = styled.div`
   }
 
   @media (min-width: 768px) {
-    position: static;
+    position: sticky;
+    top: 0;
     height: 100vh;
     opacity: 1;
     max-width: 320px;
