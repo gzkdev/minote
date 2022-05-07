@@ -1,13 +1,13 @@
 import { useContext, useRef } from "react";
-import { motion } from "framer-motion";
 import NotesContext from "../../NotesContext";
 import NoteFormStyled from "./NoteFormStyled";
-import { FaTimes } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
-function NoteForm({ isOpen, setIsOpen }) {
+function NoteForm() {
   const { addNote } = useContext(NotesContext);
   const noteTitle = useRef();
   const noteText = useRef();
+  const navigate = useNavigate();
 
   const handleAddNote = () => {
     if (noteTitle.current.value) {
@@ -19,18 +19,16 @@ function NoteForm({ isOpen, setIsOpen }) {
         date: date.toLocaleDateString(),
       };
       addNote(data);
-      setIsOpen(!isOpen);
       noteTitle.current.value = noteText.current.value = "";
+      navigate("/");
     }
   };
 
   return (
-    <NoteFormStyled as={motion.div}>
+    <NoteFormStyled>
       <div className="wrapper">
         <div className="top">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <FaTimes />
-          </button>
+          <Link to="/">Cancel</Link>
           <button onClick={handleAddNote}>Save</button>
         </div>
         <input ref={noteTitle} type="text" placeholder="Title" />

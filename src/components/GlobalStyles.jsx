@@ -76,7 +76,10 @@ const GlobalStyles = createGlobalStyle`
     }
 
     section{
-        padding: 3rem 0;
+        margin-top: 4rem;
+        padding: 0 0.5rem;
+        border-radius: 8px;
+        min-height: 80vh;
     }
 `;
 
