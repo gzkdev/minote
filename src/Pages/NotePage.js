@@ -10,12 +10,13 @@ import NotePageForm from "../components/NotePageForm";
 export default function Note() {
     const params = useParams();
     const noteId = params.noteid;
-    const { updateSetNote, notes } = useContext(NotesContext)
+    const { updateSetNote, notes, notesTrash, setNotesTrash } = useContext(NotesContext)
     const navigate = useNavigate()
     const data = notes[noteId];
 
     const deleteNote = (noteId) => {
         const newNotes = { ...notes };
+        setNotesTrash([...notesTrash, notes[noteId]]);
         delete newNotes[noteId];
         updateSetNote(newNotes);
         navigate("/")

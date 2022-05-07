@@ -8,6 +8,9 @@ export function NotesProvider({ children }) {
     });
     const [isActive, setIsActive] = useState(false)
     const [searchText, setSearchText] = useState("");
+    const [notesTrash, setNotesTrash] = useState(() => {
+        return JSON.parse(localStorage.getItem("notesTrash")) || [];
+    })
 
 
     const toggleisActive = (e) => {
@@ -24,10 +27,12 @@ export function NotesProvider({ children }) {
 
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
-    }, [notes])
+        localStorage.setItem("notesTrash", JSON.stringify(notesTrash))
+        console.log(notesTrash);
+    }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote }}>
+        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, setNotesTrash, notesTrash }}>
             {children}
         </NotesContext.Provider>
     )
