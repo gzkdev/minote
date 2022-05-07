@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
         --color-500: #415acb;
         --color-600: #f6591c;
         --color-700: #040118;
+        --color-710: #54506d;
         --color-800: #b4bad3;
         --fs--2: clamp(0.79rem, calc(0.59rem + 0.52vw), 0.96rem);
         --fs--1: clamp(0.8rem, calc(0.61rem + 0.82vw), 1.10rem);

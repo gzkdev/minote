@@ -46,17 +46,16 @@ const SideBarStyled = styled.div`
       align-items: center;
       text-decoration: none;
       color: inherit;
+      font-weight: bold;
+      color: var(--color-710);
       padding: 1.5rem 2rem;
-      margin-right: 0.5rem;
-      border-radius: 0 40px 40px 0;
       border: none;
       outline: none;
       cursor: pointer;
 
       &:hover,
       &:active {
-        background: var(--color-300);
-        color: var(--color-110);
+        color: var(--color-300);
         transition: 200ms;
       }
 

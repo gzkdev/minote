@@ -1,15 +1,12 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import NotesContext from "../../NotesContext";
 import SideBarStyled from "./SideBar.styled";
 import {
   FaLightbulb,
-  FaTrash,
-  FaCog,
   FaLayerGroup,
   FaExternalLinkSquareAlt,
 } from "react-icons/fa";
-
-import { Link } from "react-router-dom";
 
 export default function SideBar() {
   const { isActive, toggleisActive } = useContext(NotesContext);
@@ -29,18 +26,6 @@ export default function SideBar() {
               <Link to="/categories">
                 <FaLayerGroup />
                 <span>Categories</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <FaTrash />
-                <span>Trash</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <FaCog />
-                <span>Settings</span>
               </Link>
             </li>
             <li>
