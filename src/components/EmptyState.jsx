@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import EmptyStateImage from "../assets/images/empty-state.svg";
 
 const EmptyStateStyled = styled.div`
   max-width: 90%;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +21,16 @@ const EmptyStateStyled = styled.div`
     object-fit: contain;
     pointer-events: none;
   }
+
+  & a {
+    text-decoration: none;
+    color: var(--color-100);
+    background-color: var(--color-300);
+    padding: 0.6rem 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    border-radius: 4px;
+  }
 `;
 
 function EmptyState() {
@@ -28,6 +39,7 @@ function EmptyState() {
       <img src={EmptyStateImage} alt="No notes created yet" />
       <h3>No notes yet</h3>
       <div>Tap the button below to create note</div>
+      <Link to="add_note">Add new note</Link>
     </EmptyStateStyled>
   );
 }

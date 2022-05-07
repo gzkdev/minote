@@ -6,6 +6,7 @@ import {
   FaLightbulb,
   FaLayerGroup,
   FaExternalLinkSquareAlt,
+  FaPlus,
 } from "react-icons/fa";
 
 export default function SideBar() {
@@ -20,6 +21,12 @@ export default function SideBar() {
               <Link to="/">
                 <FaLightbulb />
                 <span>Notes</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/add_note">
+                <FaPlus />
+                <span>Add new note</span>
               </Link>
             </li>
             <li>

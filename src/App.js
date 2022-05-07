@@ -4,6 +4,7 @@ import { NotesProvider } from "./NotesContext";
 import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
 import Note from "./Pages/NotePage";
+import AddNote from "./Pages/AddNote";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="notes/:noteid" element={<Note />} />
+          <Route path="add_note" element={<AddNote />} />
         </Routes>
       </BrowserRouter>
     </NotesProvider>
