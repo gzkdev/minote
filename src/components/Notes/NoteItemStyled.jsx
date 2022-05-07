@@ -4,6 +4,10 @@ const NoteItemStyled = styled.div`
   background-color: var(--color-100);
   border-radius: 8px;
 
+  & > div {
+    padding: 1rem 1rem;
+  }
+
   & a {
     text-decoration: none;
     color: inherit;

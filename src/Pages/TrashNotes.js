@@ -5,6 +5,7 @@ import SideBar from "../components/SideBar/SideBar"
 import MainContainer from "../components/MainContainer"
 import SearchBar from "../components/SearchBar/SearchBar"
 import NotesContainer from "../components/Notes/NotesContainer"
+import TrashItem from "../components/TrashItem"
 
 export default function TrashNotes() {
     const { notesTrash } = useContext(NotesContext)
@@ -25,7 +26,7 @@ export default function TrashNotes() {
                         {
                             notesTrash.length ? (
                                 notesTrash.map(note => (
-                                    <div key={note.id}>{note.title}</div>
+                                    <TrashItem data={note} key={note.id} />
                                 ))
                             ) : "You have no notes in trash"
                         }
