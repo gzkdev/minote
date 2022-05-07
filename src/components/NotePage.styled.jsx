@@ -16,29 +16,19 @@ const NotePageStyled = styled.section`
     justify-content: space-between;
     padding: 1rem 0;
 
+    & a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
     & button {
       font-weight: 600;
       transition: transform 200ms;
-      border-radius: 4px;
       cursor: pointer;
-
-      &:nth-child(1) {
-        border-radius: 50%;
-        width: auto;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          padding: 1rem 1rem;
-          bottom: 10%;
-        }
-      }
 
       &:nth-child(2) {
         margin-left: auto;
-        margin-right: 1rem;
-        padding: 0 1rem;
       }
 
       &:nth-child(3) {
@@ -46,6 +36,8 @@ const NotePageStyled = styled.section`
         color: var(--color-100);
         padding: 0 2rem;
         transition: 200ms;
+        border-radius: 4px;
+        margin-left: 2rem;
 
         &:hover {
           background-color: var(--color-400);

@@ -1,13 +1,8 @@
 import NotePageStyled from "../components/NotePage.styled";
-import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function NotePageForm({
-  data,
-  deleteNote,
-  handleSaveNote,
-  navigate,
-}) {
+export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
   const [noteContent, setNoteContent] = useState(data.content);
   const [noteTitle, setNoteTitle] = useState(data.title);
 
@@ -33,9 +28,7 @@ export default function NotePageForm({
   return (
     <NotePageStyled>
       <div className="top">
-        <button onClick={() => navigate("/")}>
-          <FaArrowLeft />
-        </button>
+        <Link to="/">Back</Link>
         <button onClick={() => deleteNote(data.id)}>Delete</button>
         <button onClick={handleOnclickSave}>Save</button>
       </div>
