@@ -1,19 +1,17 @@
-import AddNoteForm from "./components/AddNoteForm/AddNoteForm";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import GlobalStyles from "./components/GlobalStyles";
 import { NotesProvider } from "./NotesContext";
-import AppContainer from "./components/AppContainer/AppContainer";
-import SideBar from "./components/SideBar/SideBar";
-import MainContainer from "./components/MainContainer";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <NotesProvider>
       <GlobalStyles />
-      <AppContainer>
-        <SideBar />
-        <MainContainer />
-      </AppContainer>
-      <AddNoteForm />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </NotesProvider>
   );
 }
