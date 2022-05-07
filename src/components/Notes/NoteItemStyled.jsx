@@ -14,6 +14,10 @@ const NoteItemStyled = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      & p {
+        margin: 0.5rem 0;
+      }
     }
   }
 `;
