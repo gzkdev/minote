@@ -26,7 +26,8 @@ function EmptyState() {
   return (
     <EmptyStateStyled>
       <img src={EmptyStateImage} alt="No notes created yet" />
-      <div>No notes yet. Tap the button below to create note</div>
+      <h3>No notes yet</h3>
+      <div>Tap the button below to create note</div>
     </EmptyStateStyled>
   );
 }

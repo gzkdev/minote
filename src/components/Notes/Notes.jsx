@@ -3,35 +3,29 @@ import NotesContext from "../../NotesContext";
 import NoteItem from "./NoteItem";
 import EmptyState from "../EmptyState";
 import NotesContainer from "./NotesContainer";
+import { LayoutGroup } from "framer-motion";
 
 function Notes() {
-  const { notes } = useContext(NotesContext);
-
-  // const renderedNotes = notes.keys.filter((note) =>
-  //   note.title.toLowerCase().includes(searchText.toLowerCase())
-  // );
+  const { notes, searchText } = useContext(NotesContext);
+  let NOTE_IDs = Object.keys(notes);
+  const renderedNotes = NOTE_IDs.filter((note) =>
+    notes[note].title.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <>
-      {notes ? (
+      {NOTE_IDs.length ? (
         <section>
           <h1>Notes</h1>
-          <NotesContainer>
-            {/* {renderedNotes.length > 0
-              ? renderedNotes.map((data, index) => (
-                  <NoteItem
-                    key={data.id}
-                    note={data}
-                    deleteNote={deleteNote}
-                    index={index}
-                    updateNote={updateNote}
-                  />
-                ))
-              : "No notes match your search"} */}
-            {Object.keys(notes).map((item) => (
-              <NoteItem key={item} data={notes[item]} />
-            ))}
-          </NotesContainer>
+          <LayoutGroup>
+            <NotesContainer>
+              {renderedNotes.length > 0
+                ? renderedNotes.map((id) => (
+                    <NoteItem key={id} data={notes[id]} />
+                  ))
+                : "No notes match your search"}
+            </NotesContainer>
+          </LayoutGroup>
         </section>
       ) : (
         <EmptyState />
