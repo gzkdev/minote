@@ -9,11 +9,12 @@ function NoteItem({ data }) {
         <motion.div layout>
           <div>
             <h4>{data.title}</h4>
-            {/* {data.content.length > 40 ? (
-              <p>{data.content.slice(0, 40)}...</p>
-            ) : (
-              <p>{data.content}</p>
-            )} */}
+            {data.content &&
+              (data.content.length > 140 ? (
+                <p>{data.content.slice(0, 140)}...</p>
+              ) : (
+                <p>{data.content}</p>
+              ))}
           </div>
           <small>{data.date}</small>
         </motion.div>

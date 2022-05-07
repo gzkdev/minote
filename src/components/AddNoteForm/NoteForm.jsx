@@ -15,7 +15,7 @@ function NoteForm({ isOpen, setIsOpen }) {
       let data = {
         id: date.toISOString(),
         title: noteTitle.current.value,
-        text: noteText.current.value,
+        content: noteText.current.value,
         date: date.toLocaleDateString(),
       };
       addNote(data);
