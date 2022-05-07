@@ -1,6 +1,6 @@
-import NotePageStyled from "../components/NotePage.styled";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NotePageStyled from "../components/NotePage.styled";
 
 export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
   const [noteContent, setNoteContent] = useState(data.content);
@@ -34,9 +34,6 @@ export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
       </div>
       <div className="body">
         <input type="text" value={noteTitle} onChange={handleNoteTitleChange} />
-        <span>
-          <b>Last modified:</b> {data.date}
-        </span>
         <textarea
           value={noteContent}
           onChange={handleNoteContentChange}

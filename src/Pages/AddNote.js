@@ -11,7 +11,6 @@ export default function AddNote() {
             <MainContainer>
                 <SearchBar />
                 <section>
-                    <h1>Add new note</h1>
                     <NoteForm />
                 </section>
             </MainContainer>

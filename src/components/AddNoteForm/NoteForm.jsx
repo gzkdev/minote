@@ -31,8 +31,8 @@ function NoteForm() {
           <Link to="/">Cancel</Link>
           <button onClick={handleAddNote}>Save</button>
         </div>
-        <input ref={noteTitle} type="text" placeholder="Title" />
-        <textarea ref={noteText} placeholder="Type something"></textarea>
+        <input ref={noteTitle} type="text" placeholder="Note title" />
+        <textarea ref={noteText} placeholder="Type something..."></textarea>
       </div>
     </NoteFormStyled>
   );
