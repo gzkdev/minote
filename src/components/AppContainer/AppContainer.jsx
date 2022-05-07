@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import SideBar from "../SideBar/SideBar";
-import MainContainer from "../MainContainer";
 
 const AppContainerStyled = styled.div`
   width: 100%;
@@ -12,11 +10,4 @@ const AppContainerStyled = styled.div`
   }
 `;
 
-export default function AppContainer() {
-  return (
-    <AppContainerStyled>
-      <SideBar />
-      <MainContainer />
-    </AppContainerStyled>
-  );
-}
+export default AppContainerStyled;
