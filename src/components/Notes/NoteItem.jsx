@@ -1,37 +1,25 @@
-import { useState } from "react";
-import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+// import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import NoteItemStyled from "./NoteItemStyled";
-import NoteItemExpanded from "./NoteItemExpanded";
 
-function NoteItem({ note, deleteNote, index, updateNote }) {
-  const [isOpen, setIsOpen] = useState("");
+function NoteItem({ data }) {
+  // const [isOpen, setIsOpen] = useState("");
 
   return (
-    <LayoutGroup>
-      <NoteItemStyled
-        onClick={() => setIsOpen(note.id)}
-        as={motion.div}
-        layoutId={note.id}
-        layout
-      >
-        <motion.h4 layout>{note.title}</motion.h4>
-        <motion.small layout>{note.date}</motion.small>
-      </NoteItemStyled>
-
-      <AnimatePresence>
-        {isOpen && (
-          <NoteItemExpanded
-            isOpen={isOpen}
-            note={note}
-            deleteNote={deleteNote}
-            updateNote={updateNote}
-            index={index}
-            setIsOpen={setIsOpen}
-            layout
-          />
-        )}
-      </AnimatePresence>
-    </LayoutGroup>
+    <NoteItemStyled
+      // onClick={() => setIsOpen(note.id)}
+      as={motion.div}
+      // layoutId={note.id}
+      layout
+    >
+      <Link to={`notes/${data.id}`}>
+        <div>
+          <motion.h4 layout>{data.title}</motion.h4>
+          <motion.small layout>{data.date}</motion.small>
+        </div>
+      </Link>
+    </NoteItemStyled>
   );
 }
 

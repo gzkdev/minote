@@ -3,6 +3,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import { NotesProvider } from "./NotesContext";
 import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
+import Note from "./Pages/Note";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path=":noteid" element={<Home />} />
+          <Route path="notes/:noteid" element={<Note />} />
         </Routes>
       </BrowserRouter>
     </NotesProvider>

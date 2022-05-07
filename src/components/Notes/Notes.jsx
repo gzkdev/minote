@@ -5,20 +5,19 @@ import EmptyState from "../EmptyState";
 import NotesContainer from "./NotesContainer";
 
 function Notes() {
-  const { notes, deleteNote, updateNote, searchText } =
-    useContext(NotesContext);
+  const { notes } = useContext(NotesContext);
 
-  const renderedNotes = notes.filter((note) =>
-    note.title.toLowerCase().includes(searchText.toLowerCase())
-  );
+  // const renderedNotes = notes.keys.filter((note) =>
+  //   note.title.toLowerCase().includes(searchText.toLowerCase())
+  // );
 
   return (
     <>
-      {notes.length > 0 ? (
+      {notes ? (
         <section>
           <h1>Notes</h1>
           <NotesContainer>
-            {renderedNotes.length > 0
+            {/* {renderedNotes.length > 0
               ? renderedNotes.map((data, index) => (
                   <NoteItem
                     key={data.id}
@@ -28,7 +27,10 @@ function Notes() {
                     updateNote={updateNote}
                   />
                 ))
-              : "No notes match your search"}
+              : "No notes match your search"} */}
+            {Object.keys(notes).map((item) => (
+              <NoteItem key={item} data={notes[item]} />
+            ))}
           </NotesContainer>
         </section>
       ) : (
