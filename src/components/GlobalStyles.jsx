@@ -52,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.2;
     }
 
+    h1{
+        margin-bottom: 2rem;
+    }
+
     input, button{
         height: 40px;
         outline: none;
@@ -72,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     section{
-        padding: 6rem 0;
+        padding: 3rem 0;
     }
 `;
 

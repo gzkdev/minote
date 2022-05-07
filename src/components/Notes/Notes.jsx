@@ -15,19 +15,22 @@ function Notes() {
   return (
     <>
       {notes.length > 0 ? (
-        <NotesContainer>
-          {renderedNotes.length > 0
-            ? renderedNotes.map((data, index) => (
-                <NoteItem
-                  key={data.id}
-                  note={data}
-                  deleteNote={deleteNote}
-                  index={index}
-                  updateNote={updateNote}
-                />
-              ))
-            : "No notes match your search"}
-        </NotesContainer>
+        <section>
+          <h1>Notes</h1>
+          <NotesContainer>
+            {renderedNotes.length > 0
+              ? renderedNotes.map((data, index) => (
+                  <NoteItem
+                    key={data.id}
+                    note={data}
+                    deleteNote={deleteNote}
+                    index={index}
+                    updateNote={updateNote}
+                  />
+                ))
+              : "No notes match your search"}
+          </NotesContainer>
+        </section>
       ) : (
         <EmptyState />
       )}
