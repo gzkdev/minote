@@ -20,13 +20,6 @@ export function NotesProvider({ children }) {
         SetNotes(data)
     }
 
-    // const updateNote = (index, title, text, date) => {
-    //     let note = notes[index];
-    //     note.title = title;
-    //     note.text = text;
-    //     note.date = date;
-    // }
-
     return (
         <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote }}>
             {children}
