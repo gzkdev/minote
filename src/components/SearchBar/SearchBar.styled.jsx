@@ -9,7 +9,7 @@ const SearchBarStyled = styled.div`
   min-height: 48px;
   padding: 0 1rem;
   background-color: var(--color-100);
-  border: 1px solid var(--color-710);
+  border: 1px solid var(--color-800);
   z-index: 900;
   border-radius: 40px;
 
@@ -20,7 +20,6 @@ const SearchBarStyled = styled.div`
   & button {
     width: 40px;
     font-size: var(--fs--1);
-    margin-left: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
