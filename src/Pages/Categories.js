@@ -10,8 +10,9 @@ export default function Categories() {
                 <SideBar />
                 <MainContainer>
                     <SearchBar />
-                    <br /><br /><br />
-                    <h1>Categories</h1>
+                    <section>
+                        <h1>Categories</h1>
+                    </section>
                 </MainContainer>
             </AppContainer>
         </>

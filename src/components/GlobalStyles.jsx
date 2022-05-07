@@ -69,6 +69,10 @@ const GlobalStyles = createGlobalStyle`
         display: block;
         max-width: 100%;
     }
+
+    section{
+        padding: 6rem 0;
+    }
 `;
 
 export default GlobalStyles;
