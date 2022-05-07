@@ -6,14 +6,14 @@ const NoteFormStyled = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden auto;
   transition: 0ms !important;
   z-index: 1000;
 
   & .wrapper {
-    width: min(90vw, 560px);
-    height: min(80vh, 400px);
+    width: 90%;
+    height: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,7 +26,7 @@ const NoteFormStyled = styled.div`
 
     & input {
       width: 100%;
-      font-size: 1.5rem;
+      font-size: var(--fs-2);
       font-weight: 600;
       padding: 1rem 0;
       height: auto;
@@ -56,8 +56,11 @@ const NoteFormStyled = styled.div`
         font-weight: 600;
         transition: transform 200ms;
         border-radius: 50%;
-        background-color: var(--color-120);
         cursor: pointer;
+
+        &:active {
+          transform: scale(0.95);
+        }
 
         &:nth-child(2) {
           background-color: var(--color-300);

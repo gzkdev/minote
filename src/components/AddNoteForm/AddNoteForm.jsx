@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AddNoteButton from "./AddNoteButton";
-import LineIcon from "react-lineicons";
 import NoteForm from "./NoteForm";
+import { FaPlus } from "react-icons/fa";
 
 function AddNoteForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ function AddNoteForm() {
   return (
     <>
       <AddNoteButton onClick={() => setIsOpen(!isOpen)}>
-        <LineIcon name="plus" />
+        <FaPlus />
       </AddNoteButton>
       {isOpen && <NoteForm isOpen={isOpen} setIsOpen={setIsOpen} />}
     </>
