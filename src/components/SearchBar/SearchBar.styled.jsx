@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
-  position: absolute;
+  position: sticky;
   top: 2rem;
-  left: 50%;
-  transform: translate(-50%, 0);
   display: flex;
   align-items: center;
-  width: calc(100% - 2rem);
+  width: 100%;
   min-height: 48px;
   padding: 0 1rem;
   background-color: var(--color-100);
-  border: 1px solid var(--color-700);
+  border: 1px solid var(--color-710);
   z-index: 900;
-  border-radius: 4px;
+  border-radius: 40px;
 
   & input {
     flex-grow: 1;

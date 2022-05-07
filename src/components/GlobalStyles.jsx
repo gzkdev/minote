@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
         box-sizing: border-box;
         --color-100: #ffffff;
-        --color-110: #fbfbfb;
+        --color-110: #ebebeb;
         --color-120: #dceeff;
         --color-200: #3898ff;
         --color-300: #081ae1;
