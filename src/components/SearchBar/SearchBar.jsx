@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import NotesContext from "../../NotesContext";
 import SearchInput from "./SearchInput";
-import LineIcon from "react-lineicons";
 import SearchBarStyled from "./SearchBar.styled";
+import { FaBars, FaCog } from "react-icons/fa";
 
 function SearchBar() {
   const { searchText, setSearchText, toggleisActive } =
@@ -17,10 +17,10 @@ function SearchBar() {
         onChange={(e) => setSearchText(e.target.value)}
       />
       <button>
-        <LineIcon name="grid-alt" />
+        <FaCog />
       </button>
       <button onClick={toggleisActive}>
-        <LineIcon name="menu" />
+        <FaBars />
       </button>
     </SearchBarStyled>
   );

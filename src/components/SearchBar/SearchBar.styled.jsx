@@ -19,15 +19,18 @@ const SearchBarStyled = styled.div`
 
   & button {
     width: 40px;
-    font-size: 1.25rem;
+    font-size: var(--fs--1);
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
+    color: var(--color-710);
     cursor: pointer;
-    transition: transform 200ms, background-color 100ms;
+    transition: background-color 100ms;
 
     &:active {
-      transform: scale(0.9);
-      background-color: var(--color-off-white);
+      background-color: var(--color-110);
     }
   }
 `;
