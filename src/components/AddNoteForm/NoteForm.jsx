@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { motion } from "framer-motion";
 import NotesContext from "../../NotesContext";
 import NoteFormStyled from "./NoteFormStyled";
-import LineIcon from "react-lineicons";
+import { FaTimes } from "react-icons/fa";
 
 function NoteForm({ isOpen, setIsOpen }) {
   const { addNote } = useContext(NotesContext);
@@ -29,7 +29,7 @@ function NoteForm({ isOpen, setIsOpen }) {
       <div className="wrapper">
         <div className="top">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <LineIcon name="close" />
+            <FaTimes />
           </button>
           <button onClick={handleAddNote}>Save</button>
         </div>

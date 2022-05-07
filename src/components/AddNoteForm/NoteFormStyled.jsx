@@ -26,7 +26,7 @@ const NoteFormStyled = styled.div`
 
     & input {
       width: 100%;
-      font-size: var(--fs-2);
+      font-size: var(--fs-1);
       font-weight: 600;
       padding: 1rem 0;
       height: auto;
