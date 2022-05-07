@@ -8,21 +8,21 @@ const SideBarStyled = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
   opacity: 0;
   transition: opacity 200ms;
   pointer-events: none;
+  z-index: 1000;
 
   &[data-toggle="true"] {
     opacity: 1;
     pointer-events: all;
 
-    .sideBar__box {
+    .sideBar__container {
       transform: translate(0, 0);
     }
   }
 
-  .sideBar__box {
+  .sideBar__container {
     width: min(320px, 70vw);
     height: 100%;
     background-color: var(--color-100);
@@ -36,26 +36,33 @@ const SideBarStyled = styled.div`
       font-size: var(--fs-1);
     }
 
-    & .sideBar__btn {
+    & li {
+      list-style: none;
+    }
+
+    & a {
+      list-style: none;
       display: flex;
       align-items: center;
-      width: 100%;
-      padding: 2rem 2rem;
-      font-size: var(--fs--2);
+      text-decoration: none;
+      color: inherit;
+      padding: 1.5rem 2rem;
+      margin-right: 0.5rem;
+      border-radius: 0 40px 40px 0;
       border: none;
       outline: none;
       cursor: pointer;
 
       &:hover,
       &:active {
-        background: var(--color-120);
+        background: var(--color-300);
+        color: var(--color-110);
+        transition: 200ms;
       }
-    }
 
-    & a.sideBar__btn {
-      text-decoration: none;
-      color: inherit;
-      padding: 1.5rem 2rem;
+      & span {
+        margin-left: 1rem;
+      }
     }
   }
 
@@ -67,7 +74,7 @@ const SideBarStyled = styled.div`
     background: none !important;
     pointer-events: all;
 
-    & .sideBar__box {
+    & .sideBar__container {
       width: 100%;
       transform: translate(0, 0);
     }
