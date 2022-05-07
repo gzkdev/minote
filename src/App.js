@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
 import Note from "./Pages/NotePage";
 import AddNote from "./Pages/AddNote";
+import TrashNotes from "./Pages/TrashNotes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="notes/:noteid" element={<Note />} />
           <Route path="add_note" element={<AddNote />} />
+          <Route path="trash" element={<TrashNotes />} />
         </Routes>
       </BrowserRouter>
     </NotesProvider>

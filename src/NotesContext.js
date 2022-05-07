@@ -32,7 +32,7 @@ export function NotesProvider({ children }) {
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, setNotesTrash, notesTrash }}>
+        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash }}>
             {children}
         </NotesContext.Provider>
     )

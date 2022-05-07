@@ -7,6 +7,7 @@ import {
   FaLayerGroup,
   FaExternalLinkSquareAlt,
   FaPlus,
+  FaTrash,
 } from "react-icons/fa";
 
 export default function SideBar() {
@@ -27,6 +28,12 @@ export default function SideBar() {
               <Link to="/add_note">
                 <FaPlus />
                 <span>Add new note</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/trash">
+                <FaTrash />
+                <span>Trash</span>
               </Link>
             </li>
             <li>
