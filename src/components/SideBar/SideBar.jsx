@@ -26,7 +26,7 @@ export default function SideBar() {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/categories">
                 <FaLayerGroup />
                 <span>Categories</span>
               </Link>
