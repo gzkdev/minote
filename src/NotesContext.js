@@ -28,7 +28,6 @@ export function NotesProvider({ children }) {
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
         localStorage.setItem("notesTrash", JSON.stringify(notesTrash))
-        console.log(notesTrash);
     }, [notes, notesTrash])
 
     return (

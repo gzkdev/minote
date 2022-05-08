@@ -1,6 +1,15 @@
 import NoteItemStyled from "./Notes/NoteItemStyled";
 
-export default function TrashItem({ data, restoreNote }) {
+export default function TrashItem({ data, restoreNote, deleteNote }) {
+  const handleDeleteNote = () => {
+    deleteNote(data.id);
+  };
+
+  const handleRestoreNote = () => {
+    restoreNote(data);
+    deleteNote(data.id);
+  };
+
   return (
     <NoteItemStyled>
       <div>
@@ -15,8 +24,8 @@ export default function TrashItem({ data, restoreNote }) {
           <span>{data.date}</span>
         </div>
         <div>
-          <button>Delete</button>
-          <button onClick={() => restoreNote(data)}>Restore</button>
+          <button onClick={handleDeleteNote}>Delete</button>
+          <button onClick={handleRestoreNote}>Restore</button>
         </div>
       </div>
     </NoteItemStyled>
