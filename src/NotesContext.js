@@ -11,6 +11,7 @@ export function NotesProvider({ children }) {
     const [notesTrash, setNotesTrash] = useState(() => {
         return JSON.parse(localStorage.getItem("notesTrash")) || [];
     })
+    const [notesArrangement, setNotesArrangement] = useState(false)
 
 
     const toggleisActive = (e) => {
@@ -31,7 +32,7 @@ export function NotesProvider({ children }) {
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash }}>
+        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement }}>
             {children}
         </NotesContext.Provider>
     )
