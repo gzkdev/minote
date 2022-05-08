@@ -4,7 +4,7 @@ const NotePageStyled = styled.section`
   margin: 2rem 0;
   padding: 1rem 1rem;
   border-radius: 8px;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
 
@@ -22,7 +22,6 @@ const NotePageStyled = styled.section`
     }
 
     & button {
-      font-weight: 600;
       transition: transform 200ms;
       cursor: pointer;
 
@@ -33,13 +32,14 @@ const NotePageStyled = styled.section`
       &:nth-child(3) {
         background-color: var(--color-300);
         color: var(--color-100);
+        font-weight: 600;
         padding: 0 2rem;
         transition: 200ms;
-        border-radius: 4px;
+        border-radius: 64px;
         margin-left: 2rem;
 
         &:hover {
-          background-color: var(--color-400);
+          background-color: var(--color-700);
         }
       }
 
@@ -56,13 +56,14 @@ const NotePageStyled = styled.section`
 
     & input {
       width: 100%;
-      font-size: 1.5rem;
+      font-size: var(--fs-1);
       font-weight: 600;
-      padding: 1rem 1rem;
-      margin: 1rem 0 0.2rem;
       height: auto;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
       background-color: var(--color-100);
-      border-radius: 4px;
+      border-bottom: 1px solid var(--color-110);
+      border-radius: 16px 16px 0 0;
     }
 
     & textarea {
@@ -75,7 +76,7 @@ const NotePageStyled = styled.section`
       padding: 1rem 1rem;
       font: inherit;
       color: inherit;
-      border-radius: 4px;
+      border-radius: 0 0 16px 16px;
     }
   }
 `;

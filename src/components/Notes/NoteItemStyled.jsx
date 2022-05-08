@@ -25,13 +25,13 @@ const NoteItemStyled = styled.div`
           background-color: var(--color-120);
           border: 1px solid var(--color-300);
           color: var(--color-300);
-          font-size: var(--fs--2);
           padding: 0 2rem;
-          border-radius: 4px;
+          border-radius: 64px;
+          transition: transform 400ms;
 
-          &:hover {
-            background-color: var(--color-300);
-            color: var(--color-100);
+          &:hover,
+          &:active {
+            transform: scale(0.95);
           }
         }
       }
