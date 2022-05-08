@@ -13,7 +13,6 @@ export function NotesProvider({ children }) {
     })
     const [notesArrangement, setNotesArrangement] = useState(false)
 
-
     const toggleisActive = (e) => {
         setIsActive(isActive => !isActive);
     }

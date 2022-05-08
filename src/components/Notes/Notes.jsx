@@ -6,9 +6,12 @@ import NotesContainer from "./NotesContainer";
 import { LayoutGroup } from "framer-motion";
 
 function Notes() {
-  const { notes, searchText } = useContext(NotesContext);
+  const { notes, searchText, notesArrangement } = useContext(NotesContext);
   let NOTE_IDs = Object.keys(notes);
-  const renderedNotes = NOTE_IDs.filter((note) =>
+  let reversed_NOTE_IDs = Object.keys(notes).reverse();
+  const renderedNotes = (
+    notesArrangement ? reversed_NOTE_IDs : NOTE_IDs
+  ).filter((note) =>
     notes[note].title.toLowerCase().includes(searchText.toLowerCase())
   );
 

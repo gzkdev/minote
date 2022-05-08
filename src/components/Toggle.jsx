@@ -30,12 +30,16 @@ const ToggleStyled = styled.div`
   }
 `;
 
-export default function Toggle() {
+export default function Toggle({ toggleFunction }) {
   const [isActive, setIsActive] = useState(false);
+  const handleOnclick = () => {
+    setIsActive(!isActive);
+    toggleFunction((state) => !state);
+  };
   return (
     <ToggleStyled
       as={motion.div}
-      onClick={() => setIsActive(!isActive)}
+      onClick={handleOnclick}
       data-toggle={isActive && isActive}
     />
   );
