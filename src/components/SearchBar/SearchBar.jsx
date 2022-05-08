@@ -24,17 +24,6 @@ function SearchBar() {
         <FaBars />
       </button>
       <Modal state={isSettingsOpen} stateFunction={setIsSettingsOpen} />
-      {/* {isSettingsOpen && (
-        <div onClick={() => setIsSettingsOpen(!isSettingsOpen)}>
-          <h4>Settings</h4>
-          <div>
-            Add new notes to top<div className="toggle"></div>
-          </div>
-          <div>
-            Switch to dark mode<div className="toggle"></div>
-          </div>
-        </div>
-      )} */}
     </SearchBarStyled>
   );
 }
