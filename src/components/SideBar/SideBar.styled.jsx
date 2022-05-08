@@ -45,11 +45,8 @@ const SideBarStyled = styled.div`
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: inherit;
-      font-weight: bold;
       color: var(--color-710);
       padding: 1.5rem 2rem;
-      border: none;
       outline: none;
       cursor: pointer;
 

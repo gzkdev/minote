@@ -4,7 +4,6 @@ import NotesContext from "../../NotesContext";
 import SideBarStyled from "./SideBar.styled";
 import {
   FaLightbulb,
-  FaLayerGroup,
   FaExternalLinkSquareAlt,
   FaPlus,
   FaTrash,
@@ -34,12 +33,6 @@ export default function SideBar() {
               <Link to="/trash">
                 <FaTrash />
                 <span>Trash</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/categories">
-                <FaLayerGroup />
-                <span>Categories</span>
               </Link>
             </li>
             <li>
