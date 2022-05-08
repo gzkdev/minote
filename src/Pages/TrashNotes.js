@@ -8,7 +8,7 @@ import NotesContainer from "../components/Notes/NotesContainer"
 import TrashItem from "../components/TrashItem"
 
 export default function TrashNotes() {
-    const { notesTrash } = useContext(NotesContext)
+    const { notesTrash, addNote } = useContext(NotesContext)
 
     // const handleDeleteNote = (id) => {
     //     const newNotes = notesTrash.filter(note => note.id !== id)
@@ -26,7 +26,7 @@ export default function TrashNotes() {
                         {
                             notesTrash.length ? (
                                 notesTrash.map(note => (
-                                    <TrashItem data={note} key={note.id} />
+                                    <TrashItem data={note} key={note.id} restoreNote={addNote} />
                                 ))
                             ) : "You have no notes in trash"
                         }

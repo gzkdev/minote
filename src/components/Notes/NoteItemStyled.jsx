@@ -6,6 +6,40 @@ const NoteItemStyled = styled.div`
 
   & > div {
     padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    & > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      & button {
+        cursor: pointer;
+        transition: 200ms;
+
+        &:nth-child(2) {
+          background-color: var(--color-120);
+          border: 1px solid var(--color-300);
+          color: var(--color-300);
+          font-size: var(--fs--2);
+          padding: 0 2rem;
+          border-radius: 4px;
+
+          &:hover {
+            background-color: var(--color-300);
+            color: var(--color-100);
+          }
+        }
+      }
+    }
+
+    & p {
+      margin: 0.5rem 0 1rem;
+    }
   }
 
   & a {
