@@ -32,9 +32,9 @@ function SettingsModal() {
         <span>Add new notes to top</span>{" "}
         <Toggle toggleFunction={setNotesArrangement} />
       </div>
-      <div>
+      {/* <div>
         <span>Switch to dark mode</span> <Toggle />
-      </div>
+      </div> */}
     </SettingsModalStyled>
   );
 }

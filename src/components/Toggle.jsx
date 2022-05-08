@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -31,8 +31,17 @@ const ToggleStyled = styled.div`
 `;
 
 export default function Toggle({ toggleFunction }) {
-  const [isActive, setIsActive] = useState(false);
-  const handleOnclick = () => {
+  const [isActive, setIsActive] = useState(() => {
+    return JSON.parse(localStorage.getItem("toggle")) || false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("toggle", JSON.stringify(isActive));
+    console.log(isActive);
+  }, [isActive]);
+
+  const handleOnclick = (e) => {
+    e.stopPropagation();
     setIsActive(!isActive);
     toggleFunction((state) => !state);
   };
