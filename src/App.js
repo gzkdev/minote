@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import GlobalStyles from "./components/GlobalStyles";
 import { NotesProvider } from "./NotesContext";
 import Home from "./Pages/Home";
-import Categories from "./Pages/Categories";
 import Note from "./Pages/NotePage";
 import AddNote from "./Pages/AddNote";
 import TrashNotes from "./Pages/TrashNotes";
@@ -14,7 +13,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/categories" element={<Categories />} />
           <Route path="notes/:noteid" element={<Note />} />
           <Route path="add_note" element={<AddNote />} />
           <Route path="trash" element={<TrashNotes />} />
