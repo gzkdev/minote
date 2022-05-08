@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import NotesContext from "../../NotesContext";
-import SearchInput from "./SearchInput";
+// import SearchInput from "./SearchInput";
 import SearchBarStyled from "./SearchBar.styled";
 import { FaBars, FaCog } from "react-icons/fa";
 
@@ -10,7 +10,7 @@ function SearchBar() {
 
   return (
     <SearchBarStyled>
-      <SearchInput
+      <input
         placeholder="Search notes"
         type="search"
         value={searchText}

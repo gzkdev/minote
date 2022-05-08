@@ -15,6 +15,9 @@ const SearchBarStyled = styled.div`
 
   & input {
     flex-grow: 1;
+    min-width: 50px;
+    outline: none;
+    border: none;
   }
 
   & button {
