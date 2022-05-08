@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const ToggleStyled = styled.div`
-  --scale: 32px;
+  --scale: 24px;
   position: relative;
   width: calc(var(--scale, 40px) * 1.5);
   height: var(--scale, 40px);

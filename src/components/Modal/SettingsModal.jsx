@@ -5,16 +5,21 @@ import NotesContext from "../../NotesContext";
 
 const SettingsModalStyled = styled.div`
   padding: 1rem 0;
-
-  & h4 {
-    font-size: var(--fs-1);
+  & h5 {
+    font-size: var(--fs-0);
+    margin-bottom: 1rem;
   }
 
   & div {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1rem;
+
+    &:nth-child(3) {
+      margin-top: 1rem;
+    }
   }
 `;
 
@@ -22,7 +27,7 @@ function SettingsModal() {
   const { setNotesArrangement } = useContext(NotesContext);
   return (
     <SettingsModalStyled>
-      <h4>Settings</h4>
+      <h5>Settings</h5>
       <div>
         <span>Add new notes to top</span>{" "}
         <Toggle toggleFunction={setNotesArrangement} />

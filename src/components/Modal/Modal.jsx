@@ -4,14 +4,14 @@ import SettingsModal from "./SettingsModal";
 const ModalStyled = styled.div`
   position: absolute;
   top: 4rem;
-  left: 50%;
-  width: min(100%, 480px);
-  transform: translate(-50%, 0);
-  min-height: 100%;
-  background-color: var(--color-100);
-  border-radius: 16px;
+  right: 1rem;
+  width: min(70vw, 280px);
+  min-height: 100px;
+  background-color: var(--color-710);
+  color: var(--color-110);
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
   padding: 1rem 1rem;
-  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.4);
 
   & > button {
     position: absolute;
