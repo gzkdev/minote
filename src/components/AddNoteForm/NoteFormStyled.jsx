@@ -10,18 +10,19 @@ const NoteFormStyled = styled.div`
 
     & input {
       width: 100%;
-      font-size: var(--fs-1);
+      font-size: var(--fs-0);
       font-weight: 600;
-      padding: 1rem;
       height: auto;
       background-color: var(--color-100);
-      margin: 2rem 0 0.2rem;
-      border-radius: 4px;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+      border-radius: 16px 16px 0 0;
+      border-bottom: 1px solid var(--color-110);
     }
 
     & textarea {
       padding: 1rem 1rem;
-      border-radius: 4px;
+      border-radius: 0 0 16px 16px;
       width: 100%;
       font: inherit;
       background: none;
@@ -39,7 +40,6 @@ const NoteFormStyled = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      /* padding: 1rem 0; */
 
       & a {
         color: inherit;
@@ -51,7 +51,6 @@ const NoteFormStyled = styled.div`
         width: 40px;
         font-weight: 600;
         transition: transform 200ms, background-color 200ms;
-        border-radius: 50%;
         cursor: pointer;
 
         &:nth-child(2) {
@@ -59,7 +58,7 @@ const NoteFormStyled = styled.div`
           color: var(--color-100);
           padding: 0 2rem;
           width: fit-content;
-          border-radius: 4px;
+          border-radius: 64px;
 
           &:hover {
             background-color: var(--color-400);
