@@ -5,12 +5,13 @@ import NotesContext from "../../NotesContext";
 
 const SettingsModalStyled = styled.div`
   padding: 1rem 0;
+
   & h5 {
     font-size: var(--fs-0);
     margin-bottom: 1rem;
   }
 
-  & div {
+  & > div {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;

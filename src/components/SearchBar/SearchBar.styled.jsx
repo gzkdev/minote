@@ -20,7 +20,7 @@ const SearchBarStyled = styled.div`
     text-transform: capitalize;
   }
 
-  & div:nth-child(1) {
+  & > div:nth-child(1) {
     position: relative;
     flex-grow: 1;
     display: flex;
