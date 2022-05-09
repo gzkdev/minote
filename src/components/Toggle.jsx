@@ -23,8 +23,8 @@ const ToggleStyled = styled.div`
 
   &::before {
     content: "";
-    width: calc(var(--scale, 40px) - 5px);
-    height: calc(var(--scale, 40px) - 5px);
+    width: calc(var(--scale, 40px) - 2px);
+    height: calc(var(--scale, 40px) - 2px);
     background-color: var(--color-100);
     border-radius: 50%;
   }
@@ -37,7 +37,6 @@ export default function Toggle({ toggleFunction }) {
 
   useEffect(() => {
     localStorage.setItem("toggle", JSON.stringify(isActive));
-    console.log(isActive);
   }, [isActive]);
 
   const handleOnclick = (e) => {
@@ -48,6 +47,8 @@ export default function Toggle({ toggleFunction }) {
   return (
     <ToggleStyled
       as={motion.div}
+      transition={{ duration: 1 }}
+      layout
       onClick={handleOnclick}
       data-toggle={isActive && isActive}
     />
