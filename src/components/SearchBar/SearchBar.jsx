@@ -4,19 +4,23 @@ import SearchBarStyled from "./SearchBar.styled";
 import { FaBars, FaCog } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 
-function SearchBar() {
+function SearchBar({ page }) {
   const { searchText, setSearchText, toggleisActive } =
     useContext(NotesContext);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   return (
     <SearchBarStyled>
-      <input
-        placeholder="Search notes"
-        type="search"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-      />
+      {page === "home" ? (
+        <input
+          placeholder="Search notes"
+          type="search"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      ) : (
+        <span>{page}</span>
+      )}
       <button onClick={() => setIsSettingsOpen(!isSettingsOpen)}>
         <FaCog />
       </button>

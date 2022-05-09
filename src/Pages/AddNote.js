@@ -9,7 +9,7 @@ export default function AddNote() {
         <AppContainer>
             <SideBar />
             <MainContainer>
-                <SearchBar />
+                <SearchBar page="Add note" />
                 <section>
                     <NoteForm />
                 </section>

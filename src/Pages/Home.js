@@ -11,11 +11,10 @@ export default function Home() {
             <AppContainer>
                 <SideBar />
                 <MainContainer>
-                    <SearchBar />
+                    <SearchBar page="home" />
                     <Notes />
                 </MainContainer>
             </AppContainer>
-            {/* <AddNoteForm /> */}
         </>
     );
 }

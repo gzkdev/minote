@@ -20,9 +20,8 @@ export default function TrashNotes() {
         <AppContainer>
             <SideBar />
             <MainContainer>
-                <SearchBar />
+                <SearchBar page="Trash" />
                 <section>
-                    <h1>Trash</h1>
                     <NotesContainer>
                         {
                             notesTrash.length ? (

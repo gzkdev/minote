@@ -13,6 +13,13 @@ const SearchBarStyled = styled.div`
   z-index: 900;
   border-radius: 40px;
 
+  & > span {
+    display: inline-block;
+    flex-grow: 1;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
   & input {
     flex-grow: 1;
     min-width: 50px;

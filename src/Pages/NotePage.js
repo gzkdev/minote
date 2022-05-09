@@ -31,7 +31,7 @@ export default function Note() {
         <AppContainer>
             <SideBar />
             <MainContainer>
-                <SearchBar />
+                <SearchBar page="Edit Note" />
                 <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} navigate={navigate} />
             </MainContainer>
         </AppContainer>
