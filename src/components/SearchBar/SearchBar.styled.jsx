@@ -20,11 +20,24 @@ const SearchBarStyled = styled.div`
     text-transform: capitalize;
   }
 
-  & input {
+  & div:nth-child(1) {
+    position: relative;
     flex-grow: 1;
-    min-width: 50px;
-    outline: none;
-    border: none;
+    display: flex;
+    align-items: center;
+
+    & input {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding-left: 1.2rem;
+    }
+
+    & label {
+      position: absolute;
+      left: 0;
+      top: 30%;
+    }
   }
 
   & button {

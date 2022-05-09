@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import NotesContext from "../../NotesContext";
 import SearchBarStyled from "./SearchBar.styled";
-import { FaBars, FaCog } from "react-icons/fa";
+import { FaBars, FaCog, FaSearch } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 
 function SearchBar({ page }) {
@@ -12,12 +12,18 @@ function SearchBar({ page }) {
   return (
     <SearchBarStyled>
       {page === "home" ? (
-        <input
-          placeholder="Search notes"
-          type="search"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
+        <div>
+          <label htmlFor="search">
+            <FaSearch />
+          </label>
+          <input
+            name="search"
+            placeholder="Search notes"
+            type="search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </div>
       ) : (
         <span>{page}</span>
       )}
