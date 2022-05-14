@@ -13,30 +13,30 @@ export default function SideBar() {
   const { isActive, toggleisActive } = useContext(NotesContext);
   return (
     <SideBarStyled data-toggle={isActive && isActive} onClick={toggleisActive}>
-      <div className="sideBar__container">
-        <h3 className="sideBar__title">minotes</h3>
+      <div className="menu__container">
         <nav>
-          <ul>
-            <li>
-              <Link to="/">
+          <ul className="menu__list">
+            <li className="menu__item">
+              <Link className="menu__link" to="/">
                 <FaLightbulb />
                 <span>Notes</span>
               </Link>
             </li>
-            <li>
-              <Link to="/add_note">
+            <li className="menu__item">
+              <Link className="menu__link" to="/add_note">
                 <FaPlus />
                 <span>Add new note</span>
               </Link>
             </li>
-            <li>
-              <Link to="/trash">
+            <li className="menu__item">
+              <Link className="menu__link" to="/trash">
                 <FaTrash />
                 <span>Trash</span>
               </Link>
             </li>
-            <li>
+            <li className="menu__item">
               <a
+                className="menu__link"
                 href="https://github.com.gzkdev/minote"
                 target="_blank"
                 rel="noopener noreferrer"
