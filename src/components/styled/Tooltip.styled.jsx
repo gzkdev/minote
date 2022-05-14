@@ -5,10 +5,10 @@ const ToolTipStyled = styled.div`
   top: 6rem;
   right: 0;
   width: min(70vw, 280px);
-  background-color: var(--color-700);
+  background-color: var(--color-710);
   color: var(--color-110);
   border-radius: 8px;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem 3rem;
   opacity: 0;
   pointer-events: none;
   transform: translate(0, 20%);
@@ -24,8 +24,24 @@ const ToolTipStyled = styled.div`
 
   .tooltip__action {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
+
+    .description {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+
+    small {
+      opacity: 0.7;
+    }
   }
 `;
 
