@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
-        color: var(--color-700);
+        color: var(--color-710);
         background-color: var(--color-110);
     }
 

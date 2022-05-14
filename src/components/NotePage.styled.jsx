@@ -14,7 +14,7 @@ const NotePageStyled = styled.div`
 
   .note__top__container {
     padding: var(--padding-block) 1rem;
-    width: min(var(--width), 800px);
+    width: min(var(--width), 640px);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -36,10 +36,9 @@ const NotePageStyled = styled.div`
   }
 
   .note__btn--save {
-    background-color: var(--color-300);
-    color: var(--color-100);
+    background-color: var(--color-120);
     font-weight: 600;
-    padding: 0 1rem;
+    padding: 0 2rem;
     transition: 200ms;
     border-radius: 4px;
     margin-left: 2rem;
@@ -51,9 +50,9 @@ const NotePageStyled = styled.div`
   }
 
   .note__body__container {
-    min-height: 90vh;
-    width: min(var(--width), 800px);
-    padding: calc(var(--padding-block) * 4) 1rem;
+    min-height: 100vh;
+    width: min(var(--width), 640px);
+    padding: calc(var(--padding-block) * 6) 1rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -67,8 +66,7 @@ const NotePageStyled = styled.div`
   }
 
   .note__body__input {
-    font-size: var(--fs-1);
-    font-weight: 600;
+    font-size: 2rem;
     height: auto;
     padding: var(--padding-block) 0;
   }
