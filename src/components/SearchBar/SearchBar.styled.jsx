@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
   --scale: 48px;
+  --top: 2rem;
+  --border-radius: 8px;
+  --width: 90%;
   position: sticky;
-  top: 2rem;
+  top: var(--top);
   display: flex;
+  width: var(--width);
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-100);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   margin: 0 auto;
   z-index: 900;
 
@@ -32,7 +36,7 @@ const SearchBarStyled = styled.div`
     cursor: pointer;
 
     &:active {
-      background-color: var(--color-110);
+      background-color: var(--color-120);
     }
   }
 
@@ -49,7 +53,6 @@ const SearchBarStyled = styled.div`
   }
 
   @media (min-width: 1000px) {
-    --scale: 56px;
     background: none;
   }
 `;

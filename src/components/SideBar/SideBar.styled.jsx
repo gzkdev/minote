@@ -62,12 +62,11 @@ const SideBarStyled = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     position: sticky;
     top: 0;
     height: 100vh;
     opacity: 1;
-    max-width: 320px;
     background: none !important;
     pointer-events: all;
 
@@ -75,7 +74,7 @@ const SideBarStyled = styled.div`
       width: 100%;
       transform: translate(0, 0);
     }
-  }
+  } */
 `;
 
 export default SideBarStyled;
