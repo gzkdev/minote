@@ -19,7 +19,6 @@ function Notes() {
     <>
       {NOTE_IDs.length ? (
         <section>
-          <h1>Notes</h1>
           <LayoutGroup>
             <NotesContainer>
               {renderedNotes.length > 0
