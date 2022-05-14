@@ -34,16 +34,15 @@ const NoteFormStyled = styled.div`
 
   .note-form__btn {
     font-weight: 600;
-    background-color: var(--color-300);
-    color: var(--color-110);
-    padding: 0 1rem;
+    background-color: var(--color-120);
+    padding: 0 2rem;
     border-radius: 4px;
     cursor: pointer;
   }
 
   .note-form__body {
     background-color: var(--color-100);
-    padding-top: calc(var(--padding-block) * 4);
+    padding-top: calc(var(--padding-block) * 6);
   }
 
   .note-form__container--body {
@@ -60,7 +59,7 @@ const NoteFormStyled = styled.div`
 
   .note-form__input {
     height: auto;
-    font-size: var(--fs-0);
+    font-size: 2rem;
     font-weight: 600;
     padding: var(--padding-block) 0;
   }

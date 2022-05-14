@@ -67,6 +67,7 @@ const NotePageStyled = styled.div`
 
   .note__body__input {
     font-size: 2rem;
+    font-weight: 600;
     height: auto;
     padding: var(--padding-block) 0;
   }

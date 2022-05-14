@@ -13,7 +13,7 @@ const SearchBarStyled = styled.div`
   justify-content: space-between;
   background-color: var(--color-100);
   border-radius: var(--border-radius);
-  border: 1px solid var(--color-710);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.064);
   margin: 0 auto;
   z-index: 900;
 
