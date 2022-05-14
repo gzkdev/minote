@@ -4,7 +4,7 @@ import { SearchBarStyled } from "../styled";
 import { FaBars, FaCog } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 
-function SearchBar({ page }) {
+function SearchBar() {
   const { searchText, setSearchText, toggleisActive } =
     useContext(NotesContext);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
