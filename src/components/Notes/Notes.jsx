@@ -3,7 +3,6 @@ import NotesContext from "../../NotesContext";
 import NoteItem from "./NoteItem";
 import EmptyState from "../EmptyState";
 import NotesContainer from "./NotesContainer";
-import { LayoutGroup } from "framer-motion";
 
 function Notes() {
   const { notes, searchText, notesArrangement } = useContext(NotesContext);
@@ -19,15 +18,13 @@ function Notes() {
     <>
       {NOTE_IDs.length ? (
         <section>
-          <LayoutGroup>
-            <NotesContainer>
-              {renderedNotes.length > 0
-                ? renderedNotes.map((id) => (
-                    <NoteItem key={id} data={notes[id]} />
-                  ))
-                : "No notes match your search"}
-            </NotesContainer>
-          </LayoutGroup>
+          <NotesContainer>
+            {renderedNotes.length > 0
+              ? renderedNotes.map((id) => (
+                  <NoteItem key={id} data={notes[id]} />
+                ))
+              : "No notes match your search"}
+          </NotesContainer>
         </section>
       ) : (
         <EmptyState />
