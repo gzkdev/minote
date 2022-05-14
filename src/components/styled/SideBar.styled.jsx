@@ -18,17 +18,20 @@ const SideBarStyled = styled.div`
     pointer-events: all;
 
     .sideBar__container {
-      transform: translate(0, 0);
+      transform: translate(-50%, 0);
     }
   }
 
   .sideBar__container {
-    width: min(320px, 70vw);
-    height: 100%;
+    width: min(90%, 480px);
     background-color: var(--color-100);
-    transform: translate(-100%, 0);
+    transform: translate(-50%, 100%);
     transition: transform 400ms;
-    padding: 4rem 0;
+    padding: 2rem 0;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    border-radius: 8px;
 
     & .sideBar__title {
       padding-left: 2rem;
@@ -61,20 +64,6 @@ const SideBarStyled = styled.div`
       }
     }
   }
-
-  /* @media (min-width: 768px) {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    opacity: 1;
-    background: none !important;
-    pointer-events: all;
-
-    & .sideBar__container {
-      width: 100%;
-      transform: translate(0, 0);
-    }
-  } */
 `;
 
 export default SideBarStyled;

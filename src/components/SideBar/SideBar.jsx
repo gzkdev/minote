@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import NotesContext from "../../NotesContext";
-import SideBarStyled from "./SideBar.styled";
+import { SideBarStyled } from "../styled";
 import {
   FaLightbulb,
   FaExternalLinkSquareAlt,

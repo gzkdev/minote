@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const EmptyStateStyled = styled.div`
+const EmptyStateStyled = styled.div`
   max-width: 90%;
   min-height: 80vh;
   display: flex;
@@ -33,3 +33,5 @@ export const EmptyStateStyled = styled.div`
     border-radius: 4px;
   }
 `;
+
+export default EmptyStateStyled;
