@@ -17,6 +17,10 @@ const NotesContainer = styled.div`
   @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export default NotesContainer;
