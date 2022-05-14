@@ -5,8 +5,8 @@ const AppContainerStyled = styled.div`
   position: relative;
 
   @media (min-width: 768px) {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) 1fr;
   }
 `;
 
