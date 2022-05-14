@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 const NoteFormStyled = styled.div`
   --width: 100%;
+  --padding-block: 1rem;
 
   .note-form__top {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    border-radius: 8px;
-    flex-direction: column;
     background-color: var(--color-100);
+    border-bottom: 1px solid var(--color-110);
   }
 
   .note-form__container {
@@ -24,6 +23,7 @@ const NoteFormStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: var(--padding-block) 1rem;
   }
 
   .note-form__container--top a {
@@ -43,13 +43,13 @@ const NoteFormStyled = styled.div`
 
   .note-form__body {
     background-color: var(--color-100);
+    padding-top: calc(var(--padding-block) * 4);
   }
 
   .note-form__container--body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 4rem 0 8rem 0;
   }
 
   .note-form__input,
@@ -62,18 +62,21 @@ const NoteFormStyled = styled.div`
     height: auto;
     font-size: var(--fs-0);
     font-weight: 600;
-    padding: 2rem 1rem;
-    border-bottom: 1px solid var(--color-110);
+    padding: var(--padding-block) 0;
   }
 
   .note-form__text {
-    padding: 1rem 1rem;
     background: none;
     color: inherit;
     resize: none;
     flex-grow: 1;
     border: none;
     outline: none;
+  }
+
+  @media (min-width: 600px) {
+    --padding-block: 1.5rem;
+    --width: 80%;
   }
 `;
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NotePageStyled from "../components/NotePage.styled";
-import { FaArrowLeft } from "react-icons/fa";
 
 export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
   const [noteContent, setNoteContent] = useState(data.content);
@@ -34,9 +33,7 @@ export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
     <NotePageStyled>
       <div className="note__top">
         <div className="note__top__container container">
-          <Link to="/">
-            <FaArrowLeft />
-          </Link>
+          <Link to="/">Back</Link>
           <button
             className="note__btn note__btn--delete"
             onClick={handleOnclickDelete}
