@@ -7,8 +7,8 @@ const SearchBarStyled = styled.div`
   --width: 90%;
   position: sticky;
   top: var(--top);
+  width: min(var(--width), 640px);
   display: flex;
-  width: var(--width);
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-100);
@@ -38,22 +38,6 @@ const SearchBarStyled = styled.div`
     &:active {
       background-color: var(--color-120);
     }
-  }
-
-  @media (min-width: 768px) {
-    & .search-bar__btn--menu {
-      display: none;
-    }
-
-    & .search-bar__input {
-      background-color: var(--color-100);
-      padding: 0 1rem;
-      margin-right: 1rem;
-    }
-  }
-
-  @media (min-width: 1000px) {
-    background: none;
   }
 `;
 
