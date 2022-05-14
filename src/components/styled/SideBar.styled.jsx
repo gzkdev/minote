@@ -47,7 +47,6 @@ const SideBarStyled = styled.div`
 
   .menu__item {
     list-style: none;
-    color: var(--color-710);
     transition: background-color 200ms;
     border-radius: 8px;
 
