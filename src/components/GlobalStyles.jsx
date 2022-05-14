@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        font-size: 1.4rem;
+        font-size: 1rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
@@ -63,6 +63,10 @@ const GlobalStyles = createGlobalStyle`
         padding: 0 0.5rem;
         border-radius: 8px;
         min-height: 80vh;
+    }
+
+    div{
+        font-size: 1.25rem;
     }
 `;
 
