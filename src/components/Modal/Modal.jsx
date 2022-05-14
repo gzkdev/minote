@@ -5,7 +5,7 @@ import SettingsModal from "./SettingsModal";
 const ModalStyled = styled.div`
   position: absolute;
   top: 4rem;
-  right: 1rem;
+  right: 0;
   width: min(70vw, 280px);
   min-height: 100px;
   background-color: var(--color-710);
