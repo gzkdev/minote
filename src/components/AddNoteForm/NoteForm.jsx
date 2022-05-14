@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import NotesContext from "../../NotesContext";
-import NoteFormStyled from "./NoteFormStyled";
 import { Link, useNavigate } from "react-router-dom";
+import { NoteFormStyled } from "../styled";
 
 function NoteForm() {
   const { addNote } = useContext(NotesContext);
@@ -26,13 +26,28 @@ function NoteForm() {
 
   return (
     <NoteFormStyled>
-      <div className="wrapper">
-        <div className="top">
+      <div className="note-form__top">
+        <div className="note-form__container note-form__container--top">
           <Link to="/">Cancel</Link>
-          <button onClick={handleAddNote}>Save</button>
+          <button className="note-form__btn" onClick={handleAddNote}>
+            Save
+          </button>
         </div>
-        <input ref={noteTitle} type="text" placeholder="Note title" />
-        <textarea ref={noteText} placeholder="Type something..."></textarea>
+      </div>
+      <div className="note-form__body">
+        <div className="note-form__container note-form__container--body">
+          <input
+            ref={noteTitle}
+            className="note-form__input"
+            type="text"
+            placeholder="Note title"
+          />
+          <textarea
+            ref={noteText}
+            className="note-form__text"
+            placeholder="Type something..."
+          ></textarea>
+        </div>
       </div>
     </NoteFormStyled>
   );
