@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import NotesContext from "../../NotesContext";
-import SearchBarStyled from "./SearchBar.styled";
+import { SearchBarStyled } from "../styled";
 import { FaBars, FaCog } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 
