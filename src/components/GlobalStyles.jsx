@@ -39,15 +39,6 @@ const GlobalStyles = createGlobalStyle`
         background-color: var(--color-110);
     }
 
-    h1,h2,h3{
-        font-weight: bold;
-        line-height: 1.2;
-    }
-
-    h1{
-        margin-bottom: 2rem;
-    }
-
     input, button{
         height: 40px;
         outline: none;
