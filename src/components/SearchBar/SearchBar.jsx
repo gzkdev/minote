@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import NotesContext from "../../NotesContext";
 import { SearchBarStyled } from "../styled";
 import { FaBars, FaCog } from "react-icons/fa";
-import Modal from "../Modal/Modal";
+// import Modal from "../Modal/Modal";
+import SettingsToolTip from "../Tooltips/SettingToolTip";
 
 function SearchBar() {
   const { searchText, setSearchText, toggleisActive } =
@@ -31,7 +32,10 @@ function SearchBar() {
       >
         <FaCog />
       </button>
-      <Modal state={isSettingsOpen} stateFunction={setIsSettingsOpen} />
+      <SettingsToolTip
+        state={isSettingsOpen}
+        stateFunction={setIsSettingsOpen}
+      />
     </SearchBarStyled>
   );
 }
