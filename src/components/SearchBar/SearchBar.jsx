@@ -11,17 +11,24 @@ function SearchBar({ page }) {
 
   return (
     <SearchBarStyled>
-      <button onClick={toggleisActive}>
+      <button
+        className="search-bar__btn search-bar__btn--menu"
+        onClick={toggleisActive}
+      >
         <FaBars />
       </button>
       <input
+        className="search-bar__input"
         name="search"
         placeholder="Search notes"
         type="search"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
-      <button onClick={() => setIsSettingsOpen(!isSettingsOpen)}>
+      <button
+        className="search-bar__btn search-bar__btn--settings"
+        onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+      >
         <FaCog />
       </button>
       <Modal state={isSettingsOpen} stateFunction={setIsSettingsOpen} />

@@ -1,34 +1,35 @@
 import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
+  --scale: 48px;
   position: sticky;
   top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
   background-color: var(--color-100);
   border-radius: 8px;
+  margin: 0 auto;
   z-index: 900;
 
-  & input {
-    min-height: 48px;
+  & .search-bar__input {
+    height: var(--scale);
     flex-grow: 1;
+    max-width: 640px;
     border-radius: inherit;
   }
 
-  & button {
-    width: 40px;
+  & .search-bar__btn {
+    height: var(--scale);
+    width: var(--scale);
     font-size: var(--fs--1);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: inherit;
     color: var(--color-710);
-    cursor: pointer;
     transition: background-color 100ms;
+    cursor: pointer;
 
     &:active {
       background-color: var(--color-110);
@@ -36,25 +37,20 @@ const SearchBarStyled = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: none;
-    padding: 0;
-
-    button:nth-child(1) {
+    & .search-bar__btn--menu {
       display: none;
     }
 
-    button:nth-child(3) {
-      height: 100%;
-      aspect-ratio: 1/1;
-      background-color: var(--color-100);
-      border-radius: 8px;
-    }
-
-    & input {
+    & .search-bar__input {
       background-color: var(--color-100);
       padding: 0 1rem;
-      max-width: 800px;
+      margin-right: 1rem;
     }
+  }
+
+  @media (min-width: 1000px) {
+    --scale: 56px;
+    background: none;
   }
 `;
 
