@@ -1,25 +1,16 @@
 import styled from "styled-components";
 
 const NotesContainer = styled.div`
-  width: 90%;
-  margin: 0 auto;
+  --grid-min-width: 240px;
+  width: min(90%, 800px);
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
   gap: 1rem;
-
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  padding-bottom: 8rem;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  @media (min-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
+    --grid-min-width: 300px;
   }
 `;
 
