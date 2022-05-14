@@ -1,9 +1,6 @@
 import { useContext } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import NotesContext from "../NotesContext";
-import AppContainer from "../components/AppContainer/AppContainer";
-import MainContainer from "../components/MainContainer";
-import SearchBar from "../components/SearchBar/SearchBar";
 import SideBar from "../components/SideBar/SideBar";
 import NotePageForm from "../components/NotePageForm";
 
@@ -28,12 +25,9 @@ export default function Note() {
     }
 
     return (
-        <AppContainer>
+        <>
             <SideBar />
-            <MainContainer>
-                <SearchBar page="Edit Note" />
-                <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} navigate={navigate} />
-            </MainContainer>
-        </AppContainer>
+            <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} navigate={navigate} />
+        </>
     )
 }

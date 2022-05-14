@@ -1,83 +1,88 @@
 import styled from "styled-components";
 
 const NotePageStyled = styled.section`
-  margin: 2rem 0;
-  padding: 1rem 1rem;
-  border-radius: 8px;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-
-  & .top {
+  --width: 100%;
+  padding: 0 0 0 0;
+  .note__top {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
-
-    & a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: bold;
-    }
-
-    & button {
-      transition: transform 200ms;
-      cursor: pointer;
-
-      &:nth-child(2) {
-        margin-left: auto;
-      }
-
-      &:nth-child(3) {
-        background-color: var(--color-300);
-        color: var(--color-100);
-        font-weight: 600;
-        padding: 0 2rem;
-        transition: 200ms;
-        border-radius: 64px;
-        margin-left: 2rem;
-
-        &:hover {
-          background-color: var(--color-700);
-        }
-      }
-
-      &:active {
-        transform: scale(0.9);
-      }
-    }
+    background-color: var(--color-100);
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.04);
   }
 
-  & .body {
-    flex: 1;
+  .note__top__container {
+    padding: 1rem 1rem;
+    width: min(var(--width), 800px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+
+  .note__btn {
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .note__btn--delete {
+    margin-left: auto;
+  }
+
+  .note__btn--save {
+    background-color: var(--color-300);
+    color: var(--color-100);
+    font-weight: 600;
+    padding: 0 1rem;
+    transition: 200ms;
+    border-radius: 4px;
+    margin-left: 2rem;
+  }
+
+  .note__body {
+    width: 100%;
+    background-color: var(--color-100);
+  }
+
+  .note__body__container {
+    min-height: 90vh;
+    width: min(var(--width), 800px);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+  }
 
-    & input {
-      width: 100%;
-      font-size: var(--fs-1);
-      font-weight: 600;
-      height: auto;
-      padding: 1.5rem 1rem;
-      margin-top: 2rem;
-      background-color: var(--color-100);
-      border-bottom: 1px solid var(--color-110);
-      border-radius: 16px 16px 0 0;
-    }
+  .note__body__input {
+    width: 100%;
+    font-size: var(--fs-1);
+    font-weight: 600;
+    height: auto;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--color-110);
+  }
 
-    & textarea {
-      width: 100%;
-      resize: none;
-      flex-grow: 1;
-      border: none;
-      outline: none;
-      background-color: var(--color-100);
-      padding: 1rem 1rem;
-      font: inherit;
-      color: inherit;
-      border-radius: 0 0 16px 16px;
-    }
+  .note__body__text {
+    width: 100%;
+    resize: none;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: var(--color-100);
+    padding: 1rem 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    border-radius: 0 0 16px 16px;
+  }
+
+  @media (min-width: 600px) {
+    --width: 80%;
   }
 `;
 
