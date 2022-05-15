@@ -4,13 +4,16 @@ import NotesContext from "../../NotesContext";
 import { SideBarStyled } from "../styled";
 import {
   FaLightbulb,
-  FaExternalLinkSquareAlt,
   FaPlus,
+  FaSun,
   FaTrash,
+  FaLayerGroup,
 } from "react-icons/fa";
+import Toggle from "../Toggle";
 
 export default function SideBar() {
-  const { isActive, toggleisActive } = useContext(NotesContext);
+  const { isActive, toggleisActive, setNotesArrangement } =
+    useContext(NotesContext);
   return (
     <SideBarStyled data-toggle={isActive && isActive} onClick={toggleisActive}>
       <div className="menu__container">
@@ -34,16 +37,17 @@ export default function SideBar() {
                 <span>Trash</span>
               </Link>
             </li>
-            <li className="menu__item">
-              <a
-                className="menu__link"
-                href="https://github.com.gzkdev/minote"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaExternalLinkSquareAlt />
-                <span>View Code</span>
-              </a>
+            <li className="tooltip__action">
+              <div className="description">
+                <FaLayerGroup /> <span>Add new notes to the top</span>
+              </div>
+              <Toggle toggleFunction={setNotesArrangement} />
+            </li>
+            <li className="tooltip__action">
+              <div className="description">
+                <FaSun /> <span>Toggle Dark mode</span>
+              </div>
+              <small>Disabled</small>
             </li>
           </ul>
         </nav>

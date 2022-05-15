@@ -27,7 +27,7 @@ const SideBarStyled = styled.div`
     background-color: var(--color-100);
     transform: translate(-50%, 100%);
     transition: transform 400ms;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 4rem;
     position: absolute;
     bottom: 2rem;
     left: 50%;
@@ -65,6 +65,29 @@ const SideBarStyled = styled.div`
 
     span {
       margin-left: 1rem;
+    }
+  }
+
+  .tooltip__action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+
+    .description {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+
+    small {
+      opacity: 0.7;
     }
   }
 `;

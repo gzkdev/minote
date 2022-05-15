@@ -12,12 +12,6 @@ function SearchBar() {
 
   return (
     <SearchBarStyled>
-      <button
-        className="search-bar__btn search-bar__btn--menu"
-        onClick={toggleisActive}
-      >
-        <FaBars />
-      </button>
       <input
         className="search-bar__input"
         name="search"
@@ -27,6 +21,12 @@ function SearchBar() {
         onChange={(e) => setSearchText(e.target.value)}
       />
       <button
+        className="search-bar__btn search-bar__btn--menu"
+        onClick={toggleisActive}
+      >
+        <FaBars />
+      </button>
+      {/* <button
         className="search-bar__btn search-bar__btn--settings"
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
       >
@@ -35,7 +35,7 @@ function SearchBar() {
       <SettingsToolTip
         state={isSettingsOpen}
         stateFunction={setIsSettingsOpen}
-      />
+      /> */}
     </SearchBarStyled>
   );
 }
