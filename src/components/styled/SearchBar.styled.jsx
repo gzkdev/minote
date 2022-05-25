@@ -18,7 +18,7 @@ const SearchBarStyled = styled.div`
   & .search__input {
     height: var(--scale);
     flex-grow: 1;
-    max-width: 640px;
+    /* max-width: 640px; */
     border-radius: inherit;
     padding-left: 1rem;
 
@@ -45,6 +45,10 @@ const SearchBarStyled = styled.div`
   @media (min-width: 1000px) {
     & .search__button {
       display: none;
+    }
+
+    .search__input {
+      padding: 0 1.5rem;
     }
   }
 `;
