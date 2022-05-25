@@ -1,4 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import MenuStyled from "../styled/Menu.styled";
 
 export const MenuItem = ({ to, children, ...props }) => {
     const resolvedPath = useResolvedPath(to);
@@ -13,8 +14,8 @@ export const MenuItem = ({ to, children, ...props }) => {
 
 const Menu = () => {
     return (
-        <div>
-            <div>
+        <MenuStyled>
+            <div className="container">
                 <nav>
                     <ul>
                         <li><Link to="/add-note"><span>Add new note</span></Link></li>
@@ -28,7 +29,7 @@ const Menu = () => {
                     <div><span>Add New Notes to Top</span></div>
                 </div>
             </div>
-        </div>
+        </MenuStyled>
     )
 }
 

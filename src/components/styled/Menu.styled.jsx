@@ -28,6 +28,7 @@ const MenuStyled = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
+    padding: 3rem 1rem;
     background-color: rgba(255, 255, 255);
     -moz-transform: translate3d(-100%, 0, 0);
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -41,6 +42,20 @@ const MenuStyled = styled.div`
     li a {
       color: inherit;
       text-decoration: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    position: static;
+    height: 100vh;
+    pointer-events: all;
+    opacity: 1;
+
+    & .container {
+      position: static;
+      -moz-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
 `;
