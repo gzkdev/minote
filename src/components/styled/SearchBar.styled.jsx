@@ -11,7 +11,7 @@ const SearchBarStyled = styled.div`
   justify-content: space-between;
   background-color: var(--color-100);
   border: 1px solid var(--color-710);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   margin: 0 auto;
   z-index: 10;
 
@@ -42,7 +42,7 @@ const SearchBarStyled = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     & .search__button {
       display: none;
     }
