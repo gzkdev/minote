@@ -4,14 +4,14 @@ import { NotesProvider } from "./NotesContext";
 
 function App() {
   return (
-    <NotesProvider>
-      <GlobalStyles />
-      <BrowserRouter>
+    <BrowserRouter>
+      <NotesProvider>
+        <GlobalStyles />
         <Routes>
           <Route />
         </Routes>
-      </BrowserRouter>
-    </NotesProvider >
+      </NotesProvider >
+    </BrowserRouter>
   );
 }
 
