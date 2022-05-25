@@ -1,6 +1,6 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-const NotesContext = createContext();
+export const NotesContext = createContext();
 
 export function NotesProvider({ children }) {
     const [notes, SetNotes] = useState(() => {
@@ -21,6 +21,14 @@ export function NotesProvider({ children }) {
         SetNotes({ ...notes, [data.id]: data });
     }
 
+    // const deleteNote = (noteId) => {
+    //     const newNotes = { ...notes };
+    //     setNotesTrash([...notesTrash, notes[noteId]]);
+    //     delete newNotes[noteId];
+    //     updateSetNote(newNotes);
+    //     navigate("/")
+    // }
+
     const updateSetNote = (data) => {
         SetNotes(data)
     }
@@ -35,6 +43,10 @@ export function NotesProvider({ children }) {
             {children}
         </NotesContext.Provider>
     )
+}
+
+export const UseNotesContext = () => {
+    return useContext(NotesContext);
 }
 
 export default NotesContext;

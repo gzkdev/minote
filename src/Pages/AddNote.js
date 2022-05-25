@@ -1,11 +1,7 @@
-import SideBar from "../components/SideBar/SideBar"
-import NoteForm from "../components/AddNoteForm/NoteForm"
-
-export default function AddNote() {
+const AddNote = () => {
     return (
-        <>
-            <SideBar />
-            <NoteForm />
-        </>
+        <div>AddNote</div>
     )
 }
+
+export default AddNote
