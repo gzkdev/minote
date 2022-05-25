@@ -1,32 +1,39 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import MenuStyled from "../styled/Menu.styled";
-
-export const MenuItem = ({ to, children, ...props }) => {
-    const resolvedPath = useResolvedPath(to);
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-    return (
-        <li className={isActive ? "active" : null}>
-            <Link to={to}  {...props}>{children}</Link>
-        </li>
-    )
-}
+import MenuItem from "./MenuItem";
+import { FaCube, FaStar, FaPlus, FaTrash, FaMoon, FaLayerGroup } from "react-icons/fa"
 
 
 const Menu = () => {
     return (
         <MenuStyled>
-            <div className="container">
+            <div className="menu__container">
                 <nav>
+                    <span className="menu__title">minotes</span>
                     <ul>
-                        <li><Link to="/add-note"><span>Add new note</span></Link></li>
-                        <MenuItem to="/">All Notes</MenuItem>
-                        <MenuItem to="/favorites">Favorites</MenuItem>
-                        <MenuItem to="/trash">Trash</MenuItem>
+                        <MenuItem to="/add-note">
+                            <span><FaPlus className="icon" />Add new note</span>
+                        </MenuItem>
+                        <MenuItem to="/">
+                            <span><FaCube className="icon" />All Notes </span>
+                            <span className="number">10</span>
+                        </MenuItem>
+                        <MenuItem to="/favorites">
+                            <span><FaStar className="icon" />Favorites</span>
+                            <span className="number">4</span>
+                        </MenuItem>
+                        <MenuItem to="/trash">
+                            <span><FaTrash className="icon" />Trash</span>
+                            <span className="number">6</span>
+                        </MenuItem>
                     </ul>
                 </nav>
-                <div>
-                    <div><span>Toggle Dark mode</span></div>
-                    <div><span>Add New Notes to Top</span></div>
+                <div className="menu__footer">
+                    <div className="setting">
+                        <span><FaLayerGroup className="icon" /> Sort notes</span>
+                    </div>
+                    <div className="setting">
+                        <span><FaMoon className="icon" />Toggle Dark mode</span>
+                    </div>
                 </div>
             </div>
         </MenuStyled>

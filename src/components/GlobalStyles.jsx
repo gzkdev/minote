@@ -7,16 +7,12 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: inherit;
     }
 
-    html,body{
-        height: 100%;
-    }
-
     html{
         font-size: 62.5%;
         scroll-behavior: smooth;
         box-sizing: border-box;
         --color-100: #ffffff;
-        --color-110: #ebebeb;
+        --color-110: #f7f7f7;
         --color-120: #dceeff;
         --color-200: #3898ff;
         --color-300: #081ae1;
@@ -25,27 +21,30 @@ const GlobalStyles = createGlobalStyle`
         --color-600: #f6591c;
         --color-700: #040118;
         --color-710: #54506d;
-        --color-800: #b4bad3;
+        --color-800: #d1d4e2;
     }
 
     body{
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-        line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
+        line-height: 1.5;
         color: var(--color-710);
         background-color: var(--color-110);
     }
 
     input, button{
         height: 40px;
-        outline: none;
+    }
+
+    textarea, input, button{
         border: none;
-        background: none;
-        font: inherit;
+        outline: none;
+        font-family: inherit;
+        font-size: inherit;
         color: inherit;
+        background: none;
     }
 
     *::placeholder{
@@ -56,17 +55,6 @@ const GlobalStyles = createGlobalStyle`
     img{
         display: block;
         max-width: 100%;
-    }
-
-    section{
-        margin-top: 4rem;
-        padding: 0 0.5rem;
-        border-radius: 8px;
-        min-height: 80vh;
-    }
-
-    div{
-        font-size: 1.25rem;
     }
 `;
 
