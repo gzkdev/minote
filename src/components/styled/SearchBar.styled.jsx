@@ -41,6 +41,12 @@ const SearchBarStyled = styled.div`
       background-color: var(--color-120);
     }
   }
+
+  @media (min-width: 1200px) {
+    & .search__button {
+      display: none;
+    }
+  }
 `;
 
 export default SearchBarStyled;

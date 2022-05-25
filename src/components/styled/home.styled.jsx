@@ -7,6 +7,10 @@ const HomeStyled = styled.main`
   & > h1 {
     margin-bottom: 2rem;
   }
+
+  @media (min-width: 1200px) {
+    padding: 8rem 4rem;
+  }
 `;
 
 export default HomeStyled;
