@@ -3,16 +3,15 @@ import styled from "styled-components";
 const SearchBarStyled = styled.div`
   --scale: 48px;
   --top: 2rem;
-  --border-radius: 8px;
-  --width: 90%;
   position: sticky;
   top: var(--top);
-  width: min(var(--width), 640px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-100);
-  border-radius: calc(var(--border-radius) * 1);
+  border: 1px solid var(--color-710);
+  border-radius: 2rem;
   margin: 0 auto;
   z-index: 10;
 
@@ -31,12 +30,10 @@ const SearchBarStyled = styled.div`
   & .search__button {
     height: var(--scale);
     width: var(--scale);
-    font-size: var(--fs--1);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: inherit;
-    color: var(--color-710);
     transition: background-color 100ms;
     cursor: pointer;
 
