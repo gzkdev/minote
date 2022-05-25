@@ -6,15 +6,15 @@ export function NotesProvider({ children }) {
     const [notes, SetNotes] = useState(() => {
         return JSON.parse(localStorage.getItem("notes")) || {}
     });
-    const [isActive, setIsActive] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [searchText, setSearchText] = useState("");
     const [notesTrash, setNotesTrash] = useState(() => {
         return JSON.parse(localStorage.getItem("notesTrash")) || [];
     })
     const [notesArrangement, setNotesArrangement] = useState(false)
 
-    const toggleisActive = (e) => {
-        setIsActive(isActive => !isActive);
+    const toggleIsMenuOpen = (e) => {
+        setIsMenuOpen(!isMenuOpen);
     }
 
     const addNote = (data) => {
@@ -39,7 +39,7 @@ export function NotesProvider({ children }) {
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleisActive, isActive, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement }}>
             {children}
         </NotesContext.Provider>
     )
@@ -48,5 +48,3 @@ export function NotesProvider({ children }) {
 export const UseNotesContext = () => {
     return useContext(NotesContext);
 }
-
-export default NotesContext;

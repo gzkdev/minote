@@ -27,8 +27,8 @@ const MenuStyled = styled.div`
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
-    padding: 4rem 2rem;
+    width: min(80%, 480px);
+    padding: 4rem 1rem;
     background-color: rgba(255, 255, 255);
     -moz-transform: translate3d(-100%, 0, 0);
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -114,6 +114,7 @@ const MenuStyled = styled.div`
 
     & .menu__container {
       position: static;
+      width: 100%;
       -moz-transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);

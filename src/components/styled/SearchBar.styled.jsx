@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
-  --scale: 48px;
+  --scale: 40px;
   --top: 2rem;
   --border-radius: 8px;
   --width: 90%;
@@ -13,7 +13,6 @@ const SearchBarStyled = styled.div`
   justify-content: space-between;
   background-color: var(--color-100);
   border-radius: var(--border-radius);
-  /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.064); */
   margin: 0 auto;
   z-index: 900;
 

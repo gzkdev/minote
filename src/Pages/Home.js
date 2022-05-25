@@ -1,5 +1,10 @@
+import SearchBar from "../components/SearchBar/SearchBar"
+
 const Home = () => {
-    return (<h1>Home</h1>)
+    return <main>
+        <SearchBar />
+        <h1>Home</h1>
+    </main>
 }
 
 export default Home

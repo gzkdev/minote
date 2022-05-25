@@ -1,11 +1,13 @@
 import MenuStyled from "../styled/Menu.styled";
 import MenuItem from "./MenuItem";
 import { FaCube, FaStar, FaPlus, FaTrash, FaMoon, FaLayerGroup } from "react-icons/fa"
-
+import { UseNotesContext } from "../../NotesContext";
 
 const Menu = () => {
+    const { isMenuOpen } = UseNotesContext()
+
     return (
-        <MenuStyled>
+        <MenuStyled data-open={isMenuOpen && isMenuOpen}>
             <div className="menu__container">
                 <nav>
                     <span className="menu__title">minotes</span>
