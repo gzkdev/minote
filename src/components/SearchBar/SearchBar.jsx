@@ -8,17 +8,12 @@ function SearchBar() {
   return (
     <SearchBarStyled>
       <input
-        className="search-bar__input"
+        className="search__input"
         name="search"
         placeholder="Search notes"
         type="search"
-        value=""
-        // onChange={(e) => setSearchText(e.target.value)}
       />
-      <button
-        className="search-bar__btn search-bar__btn--menu"
-        onClick={toggleIsMenuOpen}
-      >
+      <button className="search__button" onClick={toggleIsMenuOpen}>
         <FaBars />
       </button>
     </SearchBarStyled>

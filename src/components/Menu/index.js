@@ -4,10 +4,15 @@ import { FaCube, FaStar, FaPlus, FaTrash, FaMoon, FaLayerGroup } from "react-ico
 import { UseNotesContext } from "../../NotesContext";
 
 const Menu = () => {
-    const { isMenuOpen } = UseNotesContext()
+    const { isMenuOpen, toggleIsMenuOpen } = UseNotesContext()
+
+    const handleOnClick = (e) => {
+        e.stopPropagation()
+        toggleIsMenuOpen()
+    }
 
     return (
-        <MenuStyled data-open={isMenuOpen && isMenuOpen}>
+        <MenuStyled onClick={handleOnClick} data-open={isMenuOpen && isMenuOpen}>
             <div className="menu__container">
                 <nav>
                     <span className="menu__title">minotes</span>

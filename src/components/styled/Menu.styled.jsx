@@ -10,6 +10,7 @@ const MenuStyled = styled.div`
   opacity: 0;
   pointer-events: none;
   transition: opacity 400ms;
+  z-index: 99;
 
   &[data-open="true"] {
     opacity: 1;
