@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HomeStyled = styled.main`
   width: 100%;
-  padding: 8rem 1rem;
+  padding: 8rem 2rem;
 
   & > h1 {
     margin-bottom: 2rem;
