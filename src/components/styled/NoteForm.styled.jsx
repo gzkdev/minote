@@ -7,6 +7,10 @@ const NoteFormStyled = styled.div`
   border-radius: 0.5rem;
   background-color: var(--color-100);
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
 
   .form__top {
     width: 100%;
@@ -95,6 +99,7 @@ const NoteFormStyled = styled.div`
   @media (min-width: 600px) {
     --padding-block: 1.5rem;
     --width: 80%;
+    position: static;
   }
 
   @media (min-width: 1000px) {
