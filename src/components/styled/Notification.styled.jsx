@@ -4,7 +4,7 @@ const NotificationStyled = styled.div`
   position: fixed;
   top: 1rem;
   left: 50%;
-  width: min(80%, 200px);
+  min-width: min(80%, 200px);
   padding: 2rem 1rem;
   font-size: 1.25rem;
   display: flex;
@@ -29,19 +29,21 @@ const NotificationStyled = styled.div`
     transform: translate3d(-50%, 0, 0);
   }
 
-  &[data-type="added"] {
+  &[data-type="added"],
+  &[data-type="favorite"] {
     background-color: hsl(120, 73%, 95%);
     border: 1px solid hsl(120, 73%, 75%);
   }
 
-  &[data-type="favorite"] {
-    background-color: hsl(34, 78%, 92%);
-    border: 1px solid hsl(34, 78%, 72%);
-  }
-
-  &[data-type="deleted"] {
+  &[data-type="deleted"],
+  &[data-type="deleted_favorite"] {
     background-color: hsl(0, 100%, 95%);
     border: 1px solid hsl(0, 100%, 75%);
+  }
+
+  &[data-type="warn_favorite"] {
+    background-color: hsl(34, 78%, 92%);
+    border: 1px solid hsl(34, 78%, 72%);
   }
 
   & span {

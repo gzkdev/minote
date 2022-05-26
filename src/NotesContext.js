@@ -1,11 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export const NotesContext = createContext();
 
 export function NotesProvider({ children }) {
-    const navigate = useNavigate();
-
     const [notes, SetNotes] = useState(() => {
         return JSON.parse(localStorage.getItem("notes")) || {}
     });
@@ -22,6 +19,11 @@ export function NotesProvider({ children }) {
 
     const [notification, setNotification] = useState("")
     const [showNotification, setShowNotification] = useState(false)
+
+
+    const updateSetNote = (data) => {
+        SetNotes(data)
+    }
 
     const toggleIsMenuOpen = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -41,21 +43,30 @@ export function NotesProvider({ children }) {
         const newNotes = { ...notes };
         setNotesTrash([...notesTrash, notes[noteId]]);
         delete newNotes[noteId];
+        const newFavoriteNotes = favoriteNotes.filter(note => note.id !== noteId)
+        setFavoriteNotes(newFavoriteNotes);
         updateSetNote(newNotes);
         setNotification("deleted")
         setShowNotification(true)
-        navigate("/")
     }
 
     const handleAddToFavorites = (noteId) => {
         const note = notes[noteId];
-        setFavoriteNotes([...favoriteNotes, note])
-        setNotification("favorite")
+        if (!(favoriteNotes.find(note => note.id === noteId))) {
+            setFavoriteNotes([...favoriteNotes, note])
+            setNotification("favorite")
+            setShowNotification(true)
+            return
+        }
+        setNotification("warn_favorite")
         setShowNotification(true)
     }
 
-    const updateSetNote = (data) => {
-        SetNotes(data)
+    const handleRemoveFromFavorites = (noteId) => {
+        const newFavoriteNotes = favoriteNotes.filter(note => note.id !== noteId)
+        setFavoriteNotes(newFavoriteNotes)
+        setNotification("deleted_favorite")
+        setShowNotification(true)
     }
 
     const toggleNotesArrangement = () => {
@@ -72,7 +83,7 @@ export function NotesProvider({ children }) {
     }, [showNotification])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification }}>
             {children}
         </NotesContext.Provider>
     )

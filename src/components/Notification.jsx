@@ -28,6 +28,18 @@ const Notification = () => {
           <span>Note was deleted</span>
         </>
       )}
+      {notification === "deleted_favorite" && (
+        <>
+          <FaTimesCircle />
+          <span>Note removed from favorites</span>
+        </>
+      )}
+      {notification === "warn_favorite" && (
+        <>
+          <FaTimesCircle />
+          <span>Note already in favorites</span>
+        </>
+      )}
     </NotificationStyled>
   );
 };

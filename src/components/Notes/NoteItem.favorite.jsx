@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import NoteItemStyled from "./NoteItemStyled";
+import { motion } from "framer-motion";
 import { FaPen, FaEllipsisV } from "react-icons/fa";
 import { UseNotesContext } from "../../NotesContext";
 
-function NoteItem({ data }) {
-  const { handleDeleteNote, handleAddToFavorites } = UseNotesContext();
+const NoteItemFavorite = ({ data }) => {
+  const { handleDeleteNote, handleRemoveFromFavorites } = UseNotesContext();
 
-  const handleOnclickDelete = () => {
+  const handleOnClickDelete = () => {
     handleDeleteNote(data.id);
   };
 
-  const handleOnclickFavorite = () => {
-    handleAddToFavorites(data.id);
+  const handleOnClickRemove = () => {
+    handleRemoveFromFavorites(data.id);
   };
 
   return (
@@ -25,8 +25,10 @@ function NoteItem({ data }) {
               <FaEllipsisV />
             </button>
             <div className="note__actions_menu">
-              <button onClick={handleOnclickFavorite}>Add to Favorites</button>
-              <button onClick={handleOnclickDelete}>Delete</button>
+              <button onClick={handleOnClickRemove}>
+                Remove from favorites
+              </button>
+              <button onClick={handleOnClickDelete}>Delete</button>
             </div>
           </div>
         </div>
@@ -50,6 +52,6 @@ function NoteItem({ data }) {
       </div>
     </NoteItemStyled>
   );
-}
+};
 
-export default NoteItem;
+export default NoteItemFavorite;

@@ -1,6 +1,20 @@
+import { HomeStyled, NotesContainer } from "../components/styled"
+import SearchBar from "../components/SearchBar/SearchBar"
+import { UseNotesContext } from "../NotesContext"
+import NoteItemFavorite from "../components/Notes/NoteItem.favorite"
+
 const Favorites = () => {
+    const { favoriteNotes } = UseNotesContext()
     return (
-        <div>Favorites</div>
+        <HomeStyled>
+            <h1>Favorite Notes</h1>
+            <SearchBar />
+            <NotesContainer>
+                {
+                    favoriteNotes.map(note => <NoteItemFavorite key={note.id} data={note} />)
+                }
+            </NotesContainer>
+        </HomeStyled>
     )
 }
 

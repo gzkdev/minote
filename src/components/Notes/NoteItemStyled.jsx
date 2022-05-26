@@ -6,7 +6,7 @@ const NoteItemStyled = styled.div`
   padding: 1.5rem 1.5rem 3rem;
   border-radius: 2rem;
   height: fit-content;
-  /* min-height: 180px; */
+  min-height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -19,6 +19,7 @@ function App() {
             <Route path="/add-note" element={<AddNote />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="note/:id" element={<Note />} />
+            <Route path="favorites/note/:id" element={<Note />} />
             <Route path="/trash" element={<Trash />} />
           </Routes>
         </AppContainer>
