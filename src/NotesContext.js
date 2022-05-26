@@ -69,6 +69,22 @@ export function NotesProvider({ children }) {
         setShowNotification(true)
     }
 
+    const handlePermanentDeleteNote = (noteId) => {
+        const newTrashNotes = notesTrash.filter(note => note.id !== noteId)
+        setNotesTrash(newTrashNotes);
+        setNotification("deleted")
+        setShowNotification(true)
+    }
+
+    const handleRestoreNote = (data) => {
+        addNote(data);
+        const newTrashNotes = notesTrash.filter(note => note.id !== data.id)
+
+        setNotesTrash(newTrashNotes)
+        setNotification("restored")
+        setShowNotification(true)
+    }
+
     const toggleNotesArrangement = () => {
         setNotesArrangement(!notesArrangement)
     }
@@ -83,7 +99,7 @@ export function NotesProvider({ children }) {
     }, [showNotification])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification, handlePermanentDeleteNote, handleRestoreNote }}>
             {children}
         </NotesContext.Provider>
     )

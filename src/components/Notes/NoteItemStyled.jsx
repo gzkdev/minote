@@ -91,6 +91,35 @@ const NoteItemStyled = styled.div`
     justify-content: space-between;
   }
 
+  & .footer__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+
+    & button {
+      padding: 0 2rem;
+      font-size: 1.2rem;
+      border-radius: 4rem;
+      transition: transform 200ms;
+
+      &:active {
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+
+      &:nth-child(1) {
+        background-color: var(--color-110);
+        margin-right: 1rem;
+      }
+
+      &:nth-child(2) {
+        border: 1px solid var(--color-400);
+      }
+    }
+  }
+
   .note__edit_btn {
     --scale: 32px;
     width: var(--scale);

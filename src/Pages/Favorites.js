@@ -10,8 +10,7 @@ const Favorites = () => {
             <h1>Favorite Notes</h1>
             <SearchBar />
             <NotesContainer>
-                {
-                    favoriteNotes.map(note => <NoteItemFavorite key={note.id} data={note} />)
+                {favoriteNotes.length > 0 && (favoriteNotes.map(note => <NoteItemFavorite key={note.id} data={note} />))
                 }
             </NotesContainer>
         </HomeStyled>
