@@ -18,8 +18,14 @@ export function NotesProvider({ children }) {
 
     const [notesArrangement, setNotesArrangement] = useState(false)
 
+    const [isDarkMode, setIsDarkMode] = useState(false)
+
     const toggleIsMenuOpen = () => {
         setIsMenuOpen(!isMenuOpen);
+    }
+
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode)
     }
 
     const addNote = (data) => {
@@ -43,13 +49,17 @@ export function NotesProvider({ children }) {
         SetNotes(data)
     }
 
+    const toggleNotesArrangement = () => {
+        setNotesArrangement(!notesArrangement)
+    }
+
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
         localStorage.setItem("notesTrash", JSON.stringify(notesTrash))
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites, toggleDarkMode }}>
             {children}
         </NotesContext.Provider>
     )

@@ -2,9 +2,10 @@ import MenuStyled from "../styled/Menu.styled";
 import MenuItem from "./MenuItem";
 import { FaCube, FaStar, FaPlus, FaTrash, FaMoon } from "react-icons/fa"
 import { UseNotesContext } from "../../NotesContext";
+import Toggle from "../Toggle";
 
 const Menu = () => {
-    const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes } = UseNotesContext()
+    const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes, toggleDarkMode } = UseNotesContext()
 
     const handleOnClick = (e) => {
         e.stopPropagation()
@@ -35,7 +36,7 @@ const Menu = () => {
                     </ul>
                 </nav>
                 <div className="setting">
-                    <span><FaMoon className="icon" />Dark mode</span>
+                    <span><FaMoon className="icon" />Dark mode</span><Toggle toggleFunction={toggleDarkMode} />
                 </div>
             </div>
         </MenuStyled>
