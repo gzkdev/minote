@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import NotePageStyled from "../components/NotePage.styled";
+import { NoteFormStyled } from "./styled";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
+export default function NotePageForm({
+  data,
+  deleteNote,
+  handleSaveNote,
+  toggleMenu,
+}) {
   const [noteContent, setNoteContent] = useState(data.content);
   const [noteTitle, setNoteTitle] = useState(data.title);
 
@@ -30,39 +35,37 @@ export default function NotePageForm({ data, deleteNote, handleSaveNote }) {
   };
 
   return (
-    <NotePageStyled>
-      <div className="note__top">
-        <div className="note__top__container container">
-          <Link to="/">Back</Link>
-          <button
-            className="note__btn note__btn--delete"
-            onClick={handleOnclickDelete}
-          >
-            Delete
-          </button>
-          <button
-            className="note__btn note__btn--save"
-            onClick={handleOnclickSave}
-          >
+    <NoteFormStyled>
+      <div className="form__top">
+        <div className="form__container form__container--top">
+          <div className="menu__box">
+            <button className="menu__button" onClick={toggleMenu}>
+              <FaBars />
+            </button>
+            <button className="menu__button" onClick={handleOnclickDelete}>
+              <FaTimes />
+            </button>
+          </div>
+          <button className="form__btn" onClick={handleOnclickSave}>
             Save
           </button>
         </div>
       </div>
-      <div className="note__body">
-        <div className="note__body__container">
+      <div className="form__body">
+        <div className="form__container form__container--body">
           <input
-            className="note__body__input"
-            type="text"
             value={noteTitle}
+            className="form__input"
+            type="text"
             onChange={handleNoteTitleChange}
           />
           <textarea
-            className="note__body__text"
+            className="form__text"
             value={noteContent}
             onChange={handleNoteContentChange}
           ></textarea>
         </div>
       </div>
-    </NotePageStyled>
+    </NoteFormStyled>
   );
 }

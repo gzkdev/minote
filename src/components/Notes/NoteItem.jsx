@@ -5,7 +5,7 @@ import NoteItemStyled from "./NoteItemStyled";
 function NoteItem({ data }) {
   return (
     <NoteItemStyled as={motion.div} layout>
-      <Link to={`notes/${data.id}`}>
+      <Link to={`note/${data.id}`}>
         <div>
           <div>
             <h4>{data.title}</h4>

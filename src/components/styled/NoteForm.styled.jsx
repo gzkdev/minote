@@ -103,7 +103,7 @@ const NoteFormStyled = styled.div`
   }
 
   @media (min-width: 1000px) {
-    .menu__button {
+    .menu__button:nth-child(1) {
       display: none;
     }
   }
