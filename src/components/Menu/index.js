@@ -4,7 +4,7 @@ import { FaCube, FaStar, FaPlus, FaTrash, FaMoon, FaLayerGroup } from "react-ico
 import { UseNotesContext } from "../../NotesContext";
 
 const Menu = () => {
-    const { isMenuOpen, toggleIsMenuOpen } = UseNotesContext()
+    const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes } = UseNotesContext()
 
     const handleOnClick = (e) => {
         e.stopPropagation()
@@ -22,15 +22,15 @@ const Menu = () => {
                         </MenuItem>
                         <MenuItem to="/">
                             <span><FaCube className="icon" />All Notes </span>
-                            <span className="number">10</span>
+                            <span className="number">{Object.keys(notes).length}</span>
                         </MenuItem>
                         <MenuItem to="/favorites">
                             <span><FaStar className="icon" />Favorites</span>
-                            <span className="number">4</span>
+                            <span className="number">{Object.keys(favoriteNotes).length}</span>
                         </MenuItem>
                         <MenuItem to="/trash">
                             <span><FaTrash className="icon" />Trash</span>
-                            <span className="number">6</span>
+                            <span className="number">{notesTrash.length}</span>
                         </MenuItem>
                     </ul>
                 </nav>

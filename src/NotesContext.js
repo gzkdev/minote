@@ -11,6 +11,8 @@ export function NotesProvider({ children }) {
     const [notesTrash, setNotesTrash] = useState(() => {
         return JSON.parse(localStorage.getItem("notesTrash")) || [];
     })
+    const [favoriteNotes, setFavoriteNotes] = useState([])
+
     const [notesArrangement, setNotesArrangement] = useState(false)
 
     const toggleIsMenuOpen = (e) => {
@@ -39,7 +41,7 @@ export function NotesProvider({ children }) {
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement, favoriteNotes, setFavoriteNotes }}>
             {children}
         </NotesContext.Provider>
     )
