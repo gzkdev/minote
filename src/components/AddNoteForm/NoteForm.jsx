@@ -1,9 +1,10 @@
 import { useContext, useRef } from "react";
-import NotesContext from "../../NotesContext";
+import { NotesContext } from "../../NotesContext";
 import { Link, useNavigate } from "react-router-dom";
 import { NoteFormStyled } from "../styled";
+import { FaTimes, FaBars } from "react-icons/fa";
 
-function NoteForm() {
+function NoteForm({ toggleMenu }) {
   const { addNote } = useContext(NotesContext);
   const noteTitle = useRef();
   const noteText = useRef();
@@ -26,25 +27,32 @@ function NoteForm() {
 
   return (
     <NoteFormStyled>
-      <div className="note-form__top">
-        <div className="note-form__container note-form__container--top">
-          <Link to="/">Cancel</Link>
-          <button className="note-form__btn" onClick={handleAddNote}>
+      <div className="form__top">
+        <div className="form__container form__container--top">
+          <div className="menu__box">
+            <button onClick={toggleMenu} className="menu__button">
+              <FaBars />
+            </button>
+            <Link to="/">
+              <FaTimes />
+            </Link>
+          </div>
+          <button className="form__btn" onClick={handleAddNote}>
             Save
           </button>
         </div>
       </div>
-      <div className="note-form__body">
-        <div className="note-form__container note-form__container--body">
+      <div className="form__body">
+        <div className="form__container form__container--body">
           <input
             ref={noteTitle}
-            className="note-form__input"
+            className="form__input"
             type="text"
             placeholder="Note title"
           />
           <textarea
             ref={noteText}
-            className="note-form__text"
+            className="form__text"
             placeholder="Type something..."
           ></textarea>
         </div>

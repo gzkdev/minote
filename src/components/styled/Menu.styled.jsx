@@ -107,7 +107,7 @@ const MenuStyled = styled.div`
   }
 
   @media (min-width: 1000px) {
-    position: static;
+    position: sticky;
     height: 100vh;
     background-color: none;
     pointer-events: all;
