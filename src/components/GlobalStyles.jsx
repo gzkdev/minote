@@ -22,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
         --color-700: #040118;
         --color-710: #54506d;
         --color-800: #d1d4e2;
+        --note-color-01: hsl(34, 78%, 92%);
+        --note-color-02: hsl(120, 73%, 85%);
+        --note-color-03: hsl(195, 53%, 85%);
+
     }
 
     body{

@@ -1,9 +1,23 @@
 import styled from "styled-components";
 
 const NoteItemStyled = styled.div`
-  background-color: var(--color-100);
+  background-color: var(--note-color-01);
+  min-height: 144px;
   border-radius: 8px;
   position: relative;
+
+  &:nth-child(2n) {
+    background-color: var(--note-color-02);
+  }
+
+  &:nth-child(3n) {
+    background-color: var(--note-color-03);
+  }
+
+  & h4 {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
 
   & > div {
     padding: 1rem 1rem;
