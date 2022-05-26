@@ -51,6 +51,10 @@ const GlobalStyles = createGlobalStyle`
         background: none;
     }
 
+    button{
+        cursor: pointer;
+    }
+
     *::placeholder{
         color: inherit;
         font: inherit;

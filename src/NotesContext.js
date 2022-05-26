@@ -1,8 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const NotesContext = createContext();
 
 export function NotesProvider({ children }) {
+    const navigate = useNavigate();
+
     const [notes, SetNotes] = useState(() => {
         return JSON.parse(localStorage.getItem("notes")) || {}
     });
@@ -15,7 +18,7 @@ export function NotesProvider({ children }) {
 
     const [notesArrangement, setNotesArrangement] = useState(false)
 
-    const toggleIsMenuOpen = (e) => {
+    const toggleIsMenuOpen = () => {
         setIsMenuOpen(!isMenuOpen);
     }
 
@@ -23,13 +26,18 @@ export function NotesProvider({ children }) {
         SetNotes({ ...notes, [data.id]: data });
     }
 
-    // const deleteNote = (noteId) => {
-    //     const newNotes = { ...notes };
-    //     setNotesTrash([...notesTrash, notes[noteId]]);
-    //     delete newNotes[noteId];
-    //     updateSetNote(newNotes);
-    //     navigate("/")
-    // }
+    const handleDeleteNote = (noteId) => {
+        const newNotes = { ...notes };
+        setNotesTrash([...notesTrash, notes[noteId]]);
+        delete newNotes[noteId];
+        updateSetNote(newNotes);
+        navigate("/")
+    }
+
+    const handleAddToFavorites = (noteId) => {
+        const note = notes[noteId];
+        setFavoriteNotes([...favoriteNotes, note])
+    }
 
     const updateSetNote = (data) => {
         SetNotes(data)
@@ -41,7 +49,7 @@ export function NotesProvider({ children }) {
     }, [notes, notesTrash])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement, favoriteNotes, setFavoriteNotes }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, setNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites }}>
             {children}
         </NotesContext.Provider>
     )

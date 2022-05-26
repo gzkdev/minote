@@ -10,15 +10,15 @@ const SearchBarStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-100);
-  border: 1px solid var(--color-710);
-  border-radius: 1.5rem;
+  border: 1px solid var(--color-800);
+  border-radius: 5rem;
   margin: 0 auto;
+  padding: 0 0 0 0.5rem;
   z-index: 10;
 
   & .search__input {
     height: var(--scale);
     flex-grow: 1;
-    /* max-width: 640px; */
     border-radius: inherit;
     padding-left: 1rem;
 

@@ -1,76 +1,113 @@
 import styled from "styled-components";
 
 const NoteItemStyled = styled.div`
-  background-color: var(--note-color-01);
-  min-height: 144px;
-  border-radius: 8px;
-  position: relative;
+  --background: var(--note-color-03);
+  background-color: var(--background);
+  padding: 1.5rem 1.5rem 3rem;
+  border-radius: 2rem;
+  height: fit-content;
+  /* min-height: 180px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:nth-child(2n) {
-    background-color: var(--note-color-02);
+    --background: var(--note-color-02);
   }
 
   &:nth-child(3n) {
-    background-color: var(--note-color-03);
+    --background: var(--note-color-01);
   }
 
-  & h4 {
-    font-weight: 600;
-    font-size: 1.6rem;
-  }
-
-  & > div {
-    padding: 1rem 1rem;
+  .note__header {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
-    height: 100%;
-
-    & > div:nth-child(2) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1rem;
-
-      & button {
-        cursor: pointer;
-        transition: 200ms;
-
-        &:nth-child(2) {
-          background-color: var(--color-120);
-          border: 1px solid var(--color-300);
-          color: var(--color-300);
-          padding: 0 2rem;
-          border-radius: 64px;
-          transition: transform 400ms;
-
-          &:hover,
-          &:active {
-            transform: scale(0.95);
-          }
-        }
-      }
-    }
-
-    & p {
-      margin: 0.5rem 0 1rem;
-    }
   }
 
-  & a {
-    text-decoration: none;
-    color: inherit;
+  .note__title {
+    display: block;
+    font-size: 1.8rem;
+    margin-right: 4rem;
+  }
 
-    & > div {
-      padding: 1rem 1rem;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+  .note__content {
+    margin: 1rem 0 1.5rem;
+  }
 
-      & p {
-        margin: 0.5rem 0 1rem;
-      }
+  .note__actions {
+    position: relative;
+  }
+
+  .note__actions > button {
+    min-height: 2rem;
+  }
+
+  .note__actions:focus-within .note__actions_menu {
+    -moz-transform: scale(1) translate3d(0, 0, 0);
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .note__actions_menu {
+    right: 0;
+    display: flex;
+    position: absolute;
+    width: max-content;
+    background-color: #fff;
+    flex-direction: column;
+    border-radius: 1rem;
+    -moz-transform: translate3d(0, 20%, 0);
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+    transition: transform 200ms, opacity 100ms;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .note__actions_menu > button {
+    width: 100%;
+    text-align: start;
+    padding: 0.5rem 16px;
+  }
+
+  .note__actions_menu > button:hover,
+  .note__actions_menu > button:active {
+    opacity: 0.8;
+  }
+
+  .note__actions_menu > button:not(:last-child) {
+    border-bottom: 1px solid var(--color-110);
+  }
+
+  .note__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .note__edit_btn {
+    --scale: 32px;
+    width: var(--scale);
+    height: var(--scale);
+    font-size: 1.2rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    transition: transform 200ms;
+
+    &:hover {
+      -moz-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
     }
   }
 `;
