@@ -4,6 +4,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import Menu from "./components/Menu";
 import { Home, Favorites, Trash, AddNote, Note } from "./Pages";
 import AppContainer from "./components/styled/AppContainer.styled";
+import Notification from "./components/Notification";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NotesProvider>
         <GlobalStyles />
         <AppContainer>
+          <Notification />
           <Menu />
           <Routes>
             <Route path="/" element={<Home />} />

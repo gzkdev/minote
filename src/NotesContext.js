@@ -20,6 +20,9 @@ export function NotesProvider({ children }) {
 
     const [isDarkMode, setIsDarkMode] = useState(false)
 
+    const [notification, setNotification] = useState("")
+    const [showNotification, setShowNotification] = useState(false)
+
     const toggleIsMenuOpen = () => {
         setIsMenuOpen(!isMenuOpen);
     }
@@ -29,7 +32,9 @@ export function NotesProvider({ children }) {
     }
 
     const addNote = (data) => {
-        SetNotes({ ...notes, [data.id]: data });
+        SetNotes({ ...notes, [data.id]: data })
+        setNotification("added")
+        setShowNotification(true)
     }
 
     const handleDeleteNote = (noteId) => {
@@ -37,12 +42,16 @@ export function NotesProvider({ children }) {
         setNotesTrash([...notesTrash, notes[noteId]]);
         delete newNotes[noteId];
         updateSetNote(newNotes);
+        setNotification("deleted")
+        setShowNotification(true)
         navigate("/")
     }
 
     const handleAddToFavorites = (noteId) => {
         const note = notes[noteId];
         setFavoriteNotes([...favoriteNotes, note])
+        setNotification("favorite")
+        setShowNotification(true)
     }
 
     const updateSetNote = (data) => {
@@ -58,8 +67,12 @@ export function NotesProvider({ children }) {
         localStorage.setItem("notesTrash", JSON.stringify(notesTrash))
     }, [notes, notesTrash])
 
+    useEffect(() => {
+        setTimeout(() => setShowNotification(false), 2000)
+    }, [showNotification])
+
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites, toggleDarkMode }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification }}>
             {children}
         </NotesContext.Provider>
     )
