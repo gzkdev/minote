@@ -58,7 +58,7 @@ const MenuStyled = styled.div`
         align-items: center;
         justify-content: space-between;
         padding: 1.4rem 1.5rem;
-        border-radius: 1rem;
+        border-radius: 4rem;
 
         & > span {
           display: flex;
@@ -95,15 +95,11 @@ const MenuStyled = styled.div`
     padding: 0 1.5rem 2rem 1.5rem;
   }
 
-  .menu__footer {
+  .setting {
+    margin-bottom: 1rem;
     padding: 0 1.5rem;
-    margin-top: auto;
-
-    .setting {
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (min-width: 1000px) {
