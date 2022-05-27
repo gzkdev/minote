@@ -1,5 +1,5 @@
-import EmptyStateImage from "../assets/images/empty-state.svg";
-import { EmptyStateStyled } from "./styled";
+import { EmptyStateImage } from "../../assets";
+import { EmptyStateStyled } from "../styled";
 
 function EmptyState() {
   return (

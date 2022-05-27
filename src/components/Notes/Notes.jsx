@@ -1,5 +1,5 @@
 import NoteItem from "./NoteItem";
-import EmptyState from "../EmptyState";
+import { EmptyState } from "../EmptyState";
 import NotesContainer from "./NotesContainer";
 
 function Notes({ notes, notesKeys, renderNotes }) {
