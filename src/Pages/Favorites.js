@@ -7,7 +7,7 @@ const Favorites = () => {
     const { favoriteNotes } = UseNotesContext()
     return (
         <HomeStyled>
-            <h1>Favorite Notes</h1>
+            <h1 className="body__text">Favorite Notes</h1>
             <SearchBar />
             <NotesContainer>
                 {favoriteNotes.length > 0 && (favoriteNotes.map(note => <NoteItemFavorite key={note.id} data={note} />))

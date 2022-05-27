@@ -4,7 +4,7 @@ const NoteItemStyled = styled.div`
   --background: var(--note-color-03);
   background-color: var(--background);
   padding: 1.5rem 1.5rem 3rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
   height: fit-content;
   min-height: 200px;
   width: 100%;

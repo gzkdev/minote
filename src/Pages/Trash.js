@@ -8,7 +8,7 @@ const Trash = () => {
 
     return (
         <HomeStyled>
-            <h1>Trash</h1>
+            <h1 className="body__text">Trash</h1>
             <SearchBar />
             <NotesContainer>
                 {notesTrash.length > 0 && notesTrash.map(note => <NoteItemTrash key={note.id} data={note} />)

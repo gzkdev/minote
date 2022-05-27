@@ -50,6 +50,7 @@ const MenuStyled = styled.div`
 
     li {
       list-style: none;
+      color: var(--color-700);
 
       & a {
         color: inherit;
@@ -68,6 +69,7 @@ const MenuStyled = styled.div`
 
         .number {
           font-size: 1.2rem;
+          color: var(--color-710);
           background-color: var(--color-800);
           padding: 0.2rem 0.8rem;
           border-radius: 2rem;
@@ -78,11 +80,6 @@ const MenuStyled = styled.div`
         & a {
           color: var(--color-100);
           background-color: var(--color-200);
-
-          & .number {
-            background-color: var(--color-120);
-            color: var(--color-710);
-          }
         }
       }
     }
