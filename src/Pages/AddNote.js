@@ -1,4 +1,4 @@
-import NoteForm from "../components/AddNoteForm/NoteForm"
+import { AddNoteForm } from "../components/NoteForms"
 import { HomeStyled } from "../components/styled"
 import { UseNotesContext } from "../NotesContext"
 
@@ -6,7 +6,7 @@ const AddNote = () => {
     const { toggleIsMenuOpen } = UseNotesContext()
     return (
         <HomeStyled>
-            <NoteForm toggleMenu={toggleIsMenuOpen} />
+            <AddNoteForm toggleMenu={toggleIsMenuOpen} />
         </HomeStyled>
     )
 }

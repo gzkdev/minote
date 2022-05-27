@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { NoteFormStyled } from "./styled";
+import { NoteFormStyled } from "../styled";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function NotePageForm({
+export default function UpdateNoteForm({
   data,
   deleteNote,
   handleSaveNote,

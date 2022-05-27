@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { NoteFormStyled } from "../styled";
 import { FaTimes, FaBars } from "react-icons/fa";
 
-function NoteForm({ toggleMenu }) {
+function AddNoteForm({ toggleMenu }) {
   const { addNote } = useContext(NotesContext);
   const noteTitle = useRef();
   const noteText = useRef();
@@ -61,4 +61,4 @@ function NoteForm({ toggleMenu }) {
   );
 }
 
-export default NoteForm;
+export default AddNoteForm;

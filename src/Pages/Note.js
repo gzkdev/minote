@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { UseNotesContext } from "../NotesContext"
 import { HomeStyled } from "../components/styled"
-import NotePageForm from "../components/NotePageForm"
+import { UpdateNoteForm } from "../components/NoteForms"
 
 const Note = () => {
     const params = useParams();
@@ -25,7 +25,7 @@ const Note = () => {
 
     return (
         <HomeStyled>
-            <NotePageForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} toggleMenu={toggleIsMenuOpen} />
+            <UpdateNoteForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} toggleMenu={toggleIsMenuOpen} />
         </HomeStyled>
     )
 }
