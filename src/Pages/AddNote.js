@@ -1,5 +1,5 @@
 import NoteForm from "../components/AddNoteForm/NoteForm"
-import HomeStyled from "../components/styled/home.styled"
+import { HomeStyled } from "../components/styled"
 import { UseNotesContext } from "../NotesContext"
 
 const AddNote = () => {

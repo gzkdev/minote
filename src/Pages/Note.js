@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { UseNotesContext } from "../NotesContext"
-import HomeStyled from "../components/styled/home.styled"
+import { HomeStyled } from "../components/styled"
 import NotePageForm from "../components/NotePageForm"
 
 const Note = () => {
