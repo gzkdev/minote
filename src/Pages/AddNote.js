@@ -1,13 +1,13 @@
 import { AddNoteForm } from "../components/NoteForms"
-import { HomeStyled } from "../components/styled"
+import { PageContainer } from "../components/styled"
 import { UseNotesContext } from "../NotesContext"
 
 const AddNote = () => {
     const { toggleIsMenuOpen } = UseNotesContext()
     return (
-        <HomeStyled>
+        <PageContainer>
             <AddNoteForm toggleMenu={toggleIsMenuOpen} />
-        </HomeStyled>
+        </PageContainer>
     )
 }
 

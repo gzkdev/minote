@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HomeStyled = styled.main`
+const PageContainer = styled.main`
   width: 100%;
   padding: 8rem 2rem;
 
@@ -13,4 +13,4 @@ const HomeStyled = styled.main`
   }
 `;
 
-export default HomeStyled;
+export default PageContainer;

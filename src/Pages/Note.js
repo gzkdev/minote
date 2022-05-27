@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { UseNotesContext } from "../NotesContext"
-import { HomeStyled } from "../components/styled"
+import { PageContainer } from "../components/styled"
 import { UpdateNoteForm } from "../components/NoteForms"
 
 const Note = () => {
@@ -24,9 +24,9 @@ const Note = () => {
     }
 
     return (
-        <HomeStyled>
+        <PageContainer>
             <UpdateNoteForm data={data} deleteNote={deleteNote} handleSaveNote={handleSaveNote} toggleMenu={toggleIsMenuOpen} />
-        </HomeStyled>
+        </PageContainer>
     )
 }
 

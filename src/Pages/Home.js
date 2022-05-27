@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FloatingButton } from "../components/Atoms"
 import Notes from "../components/Notes/Notes"
 import SearchBar from "../components/SearchBar/SearchBar"
-import { HomeStyled } from "../components/styled"
+import { PageContainer } from "../components/styled"
 import { UseNotesContext } from "../NotesContext"
 
 const Home = () => {
@@ -18,13 +18,13 @@ const Home = () => {
     );
 
     return (
-        <HomeStyled>
+        <PageContainer>
             <span className="body__text">Hello dear, 👋🏾</span>
             <h1 className="body__text">All Notes</h1>
             <SearchBar searchFunction={setSearchText} />
             <Notes notes={notes} notesKeys={NOTE_IDs} renderNotes={RENDERED_NOTES} />
             <FloatingButton />
-        </HomeStyled>
+        </PageContainer>
     )
 }
 
