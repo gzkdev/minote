@@ -1,6 +1,6 @@
-import { UseNotesContext } from "../NotesContext";
+import { UseNotesContext } from "../../NotesContext";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-import { NotificationStyled } from "./styled";
+import { NotificationStyled } from "../styled";
 
 const Notification = () => {
   const { notification, showNotification } = UseNotesContext();
