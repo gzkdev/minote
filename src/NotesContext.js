@@ -7,7 +7,6 @@ export function NotesProvider({ children }) {
         return JSON.parse(localStorage.getItem("notes")) || {}
     });
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [searchText, setSearchText] = useState("");
     const [notesTrash, setNotesTrash] = useState(() => {
         return JSON.parse(localStorage.getItem("notesTrash")) || [];
     })
@@ -107,7 +106,7 @@ export function NotesProvider({ children }) {
     }, [showNotification])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, searchText, setSearchText, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification, handlePermanentDeleteNote, handleRestoreNote }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification, handlePermanentDeleteNote, handleRestoreNote }}>
             {children}
         </NotesContext.Provider>
     )
