@@ -18,6 +18,8 @@ const ToggleStyled = styled.div`
     background-color: var(--color-200);
 
     &::before {
+      -moz-transform: translate3d(calc(70%), 0, 0);
+      -webkit-transform: translate3d(calc(70%), 0, 0);
       transform: translate3d(calc(70%), 0, 0);
     }
   }
