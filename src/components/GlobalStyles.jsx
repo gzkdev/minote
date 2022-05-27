@@ -32,10 +32,11 @@ const GlobalStyles = createGlobalStyle`
 
     html[data-theme="dark"]{
         --color-100:#040118;
-        --color-110:#161236;
+        --color-110:#201b46;
         --color-200: #8dc6f1;
         --color-300: #3444f5;
-        --color-700:#ffffff;
+        --color-700:#ebebeb;
+        --color-800: #e7e7e7;
     }
 
     body{

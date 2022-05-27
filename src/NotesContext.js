@@ -33,11 +33,7 @@ export function NotesProvider({ children }) {
     }
 
     const toggleTheme = () => {
-        if (theme === "dark") {
-            setTheme("light")
-        } else {
-            setTheme("dark")
-        }
+        setTheme(theme === "dark" ? "light" : "dark")
     }
 
     const addNote = (data) => {
