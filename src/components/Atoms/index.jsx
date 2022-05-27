@@ -1,3 +1,4 @@
 import Notification from "./Notification";
+import Toggle from "./Toggle";
 
-export { Notification };
+export { Notification, Toggle };

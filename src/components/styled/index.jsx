@@ -6,6 +6,7 @@ import NotificationStyled from "./Notification.styled";
 import HomeStyled from "./home.styled";
 import NotesContainer from "../Notes/NotesContainer";
 import NoteItemStyled from "../Notes/NoteItemStyled";
+import ToggleStyled from "./Toggle.styled";
 
 export {
   EmptyStateStyled,
@@ -16,4 +17,5 @@ export {
   HomeStyled,
   NotesContainer,
   NoteItemStyled,
+  ToggleStyled,
 };

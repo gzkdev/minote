@@ -2,7 +2,7 @@ import MenuStyled from "../styled/Menu.styled";
 import MenuItem from "./MenuItem";
 import { FaCube, FaStar, FaPlus, FaTrash, FaMoon } from "react-icons/fa"
 import { UseNotesContext } from "../../NotesContext";
-import Toggle from "../Toggle";
+import { Toggle } from "../Atoms";
 
 const Menu = () => {
     const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes, toggleDarkMode } = UseNotesContext()
