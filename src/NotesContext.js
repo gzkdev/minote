@@ -15,7 +15,9 @@ export function NotesProvider({ children }) {
 
     const [notesArrangement, setNotesArrangement] = useState(false)
 
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        return localStorage.getItem("theme") || "light"
+    })
 
     const [notification, setNotification] = useState("")
     const [showNotification, setShowNotification] = useState(false)
@@ -88,6 +90,12 @@ export function NotesProvider({ children }) {
     const toggleNotesArrangement = () => {
         setNotesArrangement(!notesArrangement)
     }
+
+    useEffect(() => {
+        const root = document.documentElement;
+        root.setAttribute("data-theme", isDarkMode ? "dark" : "light")
+        localStorage.setItem("theme", isDarkMode)
+    }, [isDarkMode])
 
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))

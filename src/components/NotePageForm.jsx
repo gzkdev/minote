@@ -39,10 +39,13 @@ export default function NotePageForm({
       <div className="form__top">
         <div className="form__container form__container--top">
           <div className="menu__box">
-            <button className="menu__button" onClick={toggleMenu}>
+            <button className="body__text menu__button" onClick={toggleMenu}>
               <FaBars />
             </button>
-            <button className="menu__button" onClick={handleOnclickDelete}>
+            <button
+              className="body__text menu__button"
+              onClick={handleOnclickDelete}
+            >
               <FaTimes />
             </button>
           </div>
@@ -55,12 +58,12 @@ export default function NotePageForm({
         <div className="form__container form__container--body">
           <input
             value={noteTitle}
-            className="form__input"
+            className="body__text form__input"
             type="text"
             onChange={handleNoteTitleChange}
           />
           <textarea
-            className="form__text"
+            className="body__text form__text"
             value={noteContent}
             onChange={handleNoteContentChange}
           ></textarea>

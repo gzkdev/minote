@@ -11,6 +11,9 @@ const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
         scroll-behavior: smooth;
         box-sizing: border-box;
+    }
+
+    :root{
         --color-100: #ffffff;
         --color-110: #f7f7f7;
         --color-120: #dceeff;
@@ -25,7 +28,14 @@ const GlobalStyles = createGlobalStyle`
         --note-color-01: hsl(34, 78%, 92%);
         --note-color-02: hsl(120, 73%, 85%);
         --note-color-03: hsl(195, 53%, 85%);
+    }
 
+    html[data-theme="dark"]{
+        --color-100:#040118;
+        --color-110:#161236;
+        --color-200: #8dc6f1;
+        --color-300: #3444f5;
+        --color-700:#ffffff;
     }
 
     body{
@@ -36,6 +46,11 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
         color: var(--color-710);
         background-color: var(--color-110);
+        transition: background-color 400ms, color 200ms;
+    }
+
+    html[data-theme="dark"] .body__text{
+        color: var(--color-120);
     }
 
     input, button{

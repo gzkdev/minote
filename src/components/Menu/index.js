@@ -16,7 +16,7 @@ const Menu = () => {
         <MenuStyled onClick={handleOnClick} data-open={isMenuOpen && isMenuOpen}>
             <div className="menu__container">
                 <nav>
-                    <span className="menu__title">minotes</span>
+                    <span className="menu__title body__text">minotes</span>
                     <ul>
                         <MenuItem to="/add-note">
                             <span><FaPlus className="icon" />Add new note</span>

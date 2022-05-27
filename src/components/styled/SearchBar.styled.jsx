@@ -10,7 +10,7 @@ const SearchBarStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-100);
-  border: 1px solid var(--color-800);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5rem;
   margin: 0 auto;
   padding: 0 0 0 0.5rem;

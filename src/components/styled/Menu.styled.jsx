@@ -30,7 +30,7 @@ const MenuStyled = styled.div`
     height: 100%;
     width: min(80%, 480px);
     padding: 4rem 1rem;
-    background-color: rgba(255, 255, 255);
+    background-color: var(--color-100);
     -moz-transform: translate3d(-100%, 0, 0);
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
@@ -81,7 +81,7 @@ const MenuStyled = styled.div`
 
           & .number {
             background-color: var(--color-120);
-            color: var(--color-200);
+            color: var(--color-710);
           }
         }
       }

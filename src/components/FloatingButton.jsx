@@ -12,14 +12,18 @@ const FloatingLinkStyled = styled.div`
   align-items: center;
   width: var(--scale);
   height: var(--scale);
-  border-radius: 2rem;
-  color: var(--color-110);
+  border-radius: 4rem;
+  color: var(--color-120);
   background-color: var(--color-300);
-  transition: background-color 200ms;
+  transition: transform 200ms;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 
   &:hover {
-    background-color: var(--color-700);
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 
   & a {
@@ -31,6 +35,11 @@ const FloatingLinkStyled = styled.div`
     justify-content: center;
     text-decoration: none;
     color: inherit;
+  }
+
+  @media (min-width: 768px) {
+    bottom: 6rem;
+    right: 6rem;
   }
 `;
 
