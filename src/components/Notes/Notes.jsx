@@ -1,29 +1,15 @@
-import { useContext } from "react";
-import { NotesContext } from "../../NotesContext";
 import NoteItem from "./NoteItem";
 import EmptyState from "../EmptyState";
 import NotesContainer from "./NotesContainer";
 
-function Notes() {
-  const { notes, searchText, notesArrangement } = useContext(NotesContext);
-  let NOTE_IDs = Object.keys(notes);
-  let reversed_NOTE_IDs = Object.keys(notes).reverse();
-
-  const RENDERED_NOTES = (
-    notesArrangement ? reversed_NOTE_IDs : NOTE_IDs
-  ).filter((note) =>
-    notes[note].title.toLowerCase().includes(searchText.toLowerCase())
-  );
-
+function Notes({ notes, notesKeys, renderNotes }) {
   return (
     <>
-      {NOTE_IDs.length ? (
+      {notesKeys.length > 0 ? (
         <section>
           <NotesContainer>
-            {RENDERED_NOTES.length > 0
-              ? RENDERED_NOTES.map((id) => (
-                  <NoteItem key={id} data={notes[id]} />
-                ))
+            {renderNotes.length > 0
+              ? renderNotes.map((id) => <NoteItem key={id} data={notes[id]} />)
               : "No notes match your search"}
           </NotesContainer>
         </section>
