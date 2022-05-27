@@ -110,7 +110,8 @@ const NoteItemStyled = styled.div`
       }
 
       &:nth-child(1) {
-        background-color: var(--color-110);
+        background-color: var(--color-200);
+        color: var(--color-110);
         margin-right: 1rem;
       }
 
