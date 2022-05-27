@@ -28,6 +28,12 @@ const Notification = () => {
           <span>Note was deleted</span>
         </>
       )}
+      {notification === "deleted_permanent" && (
+        <>
+          <FaTimesCircle />
+          <span>Note was deleted permanently</span>
+        </>
+      )}
       {notification === "deleted_favorite" && (
         <>
           <FaTimesCircle />
@@ -38,6 +44,12 @@ const Notification = () => {
         <>
           <FaTimesCircle />
           <span>Note already in favorites</span>
+        </>
+      )}
+      {notification === "restored" && (
+        <>
+          <FaTimesCircle />
+          <span>Note was restored</span>
         </>
       )}
     </NotificationStyled>

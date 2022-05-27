@@ -73,7 +73,7 @@ export function NotesProvider({ children }) {
     const handlePermanentDeleteNote = (noteId) => {
         const newTrashNotes = notesTrash.filter(note => note.id !== noteId)
         setNotesTrash(newTrashNotes);
-        setNotification("deleted")
+        setNotification("deleted_permanent")
         setShowNotification(true)
     }
 
