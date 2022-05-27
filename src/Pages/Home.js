@@ -1,5 +1,5 @@
 import { useState } from "react"
-import FloatingButton from "../components/FloatingButton"
+import { FloatingButton } from "../components/Atoms"
 import Notes from "../components/Notes/Notes"
 import SearchBar from "../components/SearchBar/SearchBar"
 import HomeStyled from "../components/styled/home.styled"
