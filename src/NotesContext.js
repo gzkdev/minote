@@ -10,7 +10,9 @@ export function NotesProvider({ children }) {
     const [notesTrash, setNotesTrash] = useState(() => {
         return JSON.parse(localStorage.getItem("notesTrash")) || [];
     })
-    const [favoriteNotes, setFavoriteNotes] = useState([])
+    const [favoriteNotes, setFavoriteNotes] = useState(() => {
+        return JSON.parse(localStorage.getItem("favoriteNotes")) || [];
+    })
 
     const [notesArrangement, setNotesArrangement] = useState(false)
 
@@ -99,7 +101,8 @@ export function NotesProvider({ children }) {
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
         localStorage.setItem("notesTrash", JSON.stringify(notesTrash))
-    }, [notes, notesTrash])
+        localStorage.setItem("favoriteNotes", JSON.stringify(favoriteNotes))
+    }, [notes, notesTrash, favoriteNotes])
 
     useEffect(() => {
         setTimeout(() => setShowNotification(false), 2000)

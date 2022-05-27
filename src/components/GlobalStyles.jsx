@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
         color: var(--color-710);
         background-color: var(--color-110);
-        transition: background-color 400ms, color 200ms;
+        transition: background-color 300ms, color 200ms;
     }
 
     html[data-theme="dark"] .body__text{
