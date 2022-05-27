@@ -16,7 +16,7 @@ export function NotesProvider({ children }) {
 
     const [notesArrangement, setNotesArrangement] = useState(false)
 
-    const [isDarkMode, setIsDarkMode] = useState(() => {
+    const [theme, setTheme] = useState(() => {
         return localStorage.getItem("theme") || "light"
     })
 
@@ -32,8 +32,12 @@ export function NotesProvider({ children }) {
         setIsMenuOpen(!isMenuOpen);
     }
 
-    const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode)
+    const toggleTheme = () => {
+        if (theme === "dark") {
+            setTheme("light")
+        } else {
+            setTheme("dark")
+        }
     }
 
     const addNote = (data) => {
@@ -94,9 +98,9 @@ export function NotesProvider({ children }) {
 
     useEffect(() => {
         const root = document.documentElement;
-        root.setAttribute("data-theme", isDarkMode ? "dark" : "light")
-        localStorage.setItem("theme", isDarkMode)
-    }, [isDarkMode])
+        root.setAttribute("data-theme", theme)
+        localStorage.setItem("theme", theme)
+    }, [theme])
 
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
@@ -109,7 +113,7 @@ export function NotesProvider({ children }) {
     }, [showNotification])
 
     return (
-        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, toggleDarkMode, setNotification, notification, setShowNotification, showNotification, handlePermanentDeleteNote, handleRestoreNote }}>
+        <NotesContext.Provider value={{ notes, toggleIsMenuOpen, isMenuOpen, addNote, updateSetNote, notesTrash, setNotesTrash, notesArrangement, toggleNotesArrangement, favoriteNotes, setFavoriteNotes, handleRemoveFromFavorites, handleDeleteNote, handleAddToFavorites, theme, toggleTheme, setNotification, notification, setShowNotification, showNotification, handlePermanentDeleteNote, handleRestoreNote }}>
             {children}
         </NotesContext.Provider>
     )

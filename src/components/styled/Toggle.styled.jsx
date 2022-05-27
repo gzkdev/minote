@@ -14,16 +14,6 @@ const ToggleStyled = styled.div`
   border-radius: 24px;
   cursor: pointer;
 
-  &[data-toggle="true"] {
-    background-color: var(--color-200);
-
-    &::before {
-      -moz-transform: translate3d(calc(70%), 0, 0);
-      -webkit-transform: translate3d(calc(70%), 0, 0);
-      transform: translate3d(calc(70%), 0, 0);
-    }
-  }
-
   &::before {
     content: "";
     width: calc(var(--scale) * 1.6);
@@ -32,7 +22,17 @@ const ToggleStyled = styled.div`
     border-radius: 50%;
     transition: transform 200ms;
     position: absolute;
-    left: -1%;
+    left: -4%;
+  }
+
+  &[data-toggle="dark"] {
+    background-color: var(--color-200);
+
+    &::before {
+      -moz-transform: translate3d(calc(70%), 0, 0);
+      -webkit-transform: translate3d(calc(70%), 0, 0);
+      transform: translate3d(calc(70%), 0, 0);
+    }
   }
 `;
 

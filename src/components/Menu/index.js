@@ -5,7 +5,7 @@ import { UseNotesContext } from "../../NotesContext";
 import { Toggle } from "../Atoms";
 
 const Menu = () => {
-    const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes, toggleDarkMode } = UseNotesContext()
+    const { isMenuOpen, toggleIsMenuOpen, notes, notesTrash, favoriteNotes } = UseNotesContext()
 
     const handleOnClick = (e) => {
         e.stopPropagation()
@@ -36,7 +36,7 @@ const Menu = () => {
                     </ul>
                 </nav>
                 <div className="setting">
-                    <span><FaMoon className="icon" />Dark mode</span><Toggle toggleFunction={toggleDarkMode} />
+                    <span><FaMoon className="icon" />Dark mode</span><Toggle />
                 </div>
             </div>
         </MenuStyled>
