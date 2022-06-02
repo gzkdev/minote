@@ -103,7 +103,7 @@ const NoteItemStyled = styled.div`
       border-radius: 4rem;
       transition: transform 200ms;
 
-      &:active {
+      &:focus {
         -moz-transform: scale(0.9);
         -webkit-transform: scale(0.9);
         transform: scale(0.9);
